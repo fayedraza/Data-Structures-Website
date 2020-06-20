@@ -1,0 +1,372 @@
+ <!-- Created by Fayed Raza -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Arrays</title>
+
+  
+  </head>
+  <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">  Arrays <span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Big O</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Graphs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Hash Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/Website/LinkedList.html">  Linked Lists  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Searching and Sorting Methods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/Website/StacksAndQueues.html">Stacks and Queues</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Trees</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+    </div>
+    </nav>
+
+    
+  <body style="background-color: rgb(223, 217, 217);">
+    <h1 id="home">Arrays</h1>
+
+    
+    <p class="text">If you already know about linked lists and want to go into the specific sections then click one of the sections below.</p>
+   <!--  Helps the user goes to the specific section they want to go -->
+    <p class="darker">
+      <a href="#a1">1. 1D Arrays </a>
+      <br>
+      <a href="#a2">2. Static vs Dyanmic Arrays</a>
+      <br>
+      <a href="#a3">3. 2D Arrays</a>
+      <br>
+      <a href="#a4">4. Big O of Arrays</a>
+   </p>
+
+    <p class="text"> Arrays are a data structure where a fixed number of values are held. </p>
+      <!--  This section will go over 1D arrays -->
+    <h2 id="a1">1D Arrays</h2>
+
+<!--  Takes us back to the top -->
+    <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+   </p>
+
+   <h3>Declaring Values</h3>
+
+     <!-- Explanation of these arrays -->
+    <p class = "text">1D arrays are just an array with 1 dimension, meaning the area is 1 * n and n is the size which we declared.</p>
+    
+    <p class = "text">In the image below, we declared an array in Java with a fixed length.
+      <br> Also, every array has default values once initialized, the default values depend on the type, such as, String, int, and etc.
+    </p>
+    
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/84975681-058f2f00-b0f4-11ea-959b-debb8a1ae543.jpeg
+   " width="600" height="640">
+
+   <p class = "text">So how can we declare a value? 
+     <br> We just need to set the value using an index which is an access to that value in the array. 
+     <br> The small values at the bottom of the array are indexes. We can set it to any value using that. 
+     <br> In addition, the range of indexes is 0 to the length of an array minus 1. Anything out of that range makes it invalid.
+   </p>
+
+   <img class = "image" src="https://user-images.githubusercontent.com/42160652/84976515-0b860f80-b0f6-11ea-875c-752ca2af0c8f.jpeg
+   " width="600" height="640">
+      
+   <p class = "text">What if we set the value to an index that is out of bounds?
+     <br> An out of bounds exception is thrown WHICH WE DO NOT WANT.
+  </p> 
+
+  <img class = "image" src="https://user-images.githubusercontent.com/42160652/84978939-2fe4ea80-b0fc-11ea-875e-eae1feed1071.jpeg
+ " width="600" height="640">
+
+<p class = "text">Here are some more array value declarations. The image on the right shows the before and the image on the left shows after the declaration.
+</p> 
+
+<div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/84980102-2dd05b00-b0ff-11ea-8291-d6c69d3cddec.jpeg" width="420" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/84980109-2f018800-b0ff-11ea-961f-b1e17f2d322a.jpeg" width="420" height="440"> </div>
+</div>
+<!-- This section talks about comparing arrays -->
+<h3>Comparing Arrays</h3>
+
+
+<p class = "text"> As you can see we have compared two arrays. But how we can return true if two arrays have the same values?
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/84980684-b0a5e580-b100-11ea-9c41-2b65bb38a7a4.jpeg
+" width="600" height="640">
+
+<p class = "text"> We can use the Arrays.equals() method to see if the arrays have the same values or not
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/84980685-b26fa900-b100-11ea-8901-b14c567de5e7.jpeg
+" width="600" height="640">
+<!-- This section goes through traversing an array -->
+<h3>Traversing Through an Array</h3>
+
+
+<p class = "text">How can we traverse through this array?
+  <br> Hint: use the indexes
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/84982392-a1c13200-b104-11ea-9373-0021e8ec5b18.jpeg
+" width="600" height="640">
+
+<p class = "text">We can use the for loop and go through the array using indexes.
+  <br> We can use the for loop for many functions. Also, the image on the rights shows how we can do it in a while loop.
+  <br> <i>Please note: SOP stands for System.out.println(); It was just an abbreviation I used due to lack of space. </i>
+</p> 
+
+<div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/84982398-a38af580-b104-11ea-86e7-ce8c8d6b3237.jpeg" width="490" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/85189440-3484dc80-b27d-11ea-879c-de356eb92f5a.jpeg" width="550" height="440"> </div>
+</div>
+<!-- This section goes over the common exceptions -->
+<h3>Common Exceptions</h3>
+
+
+<p class = "text">Here are the common exceptions of the arrays and the reasons behind it.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/84980996-7f79e500-b101-11ea-8c81-5fbdd0450da1.jpeg
+" width="600" height="640">
+<!-- A common array problem will be solved -->
+<h3>Applications of Arrays: Double Elements</h3>
+
+
+<p class = "text">Suppose we have a problem where we want to double each element. 
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/84983025-d8e41300-b105-11ea-9727-fad204949ca9.jpeg
+" width="600" height="640">
+
+<p class = "text">For each element we can multiply it by two in order to double it.
+  <br> The Java implementation is located below.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/84983028-daadd680-b105-11ea-8e1f-c4ee2203c627.jpeg
+" width="600" height="640">
+
+<p class = "text">Java Implementation
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85189601-6ea2ae00-b27e-11ea-9b03-df9ff4364463.jpeg
+" width="900" height="400">
+<!-- A common array problem will be solved -->
+<h3>Applications of Arrays: Reverse Array</h3>
+
+
+<p class = "text">Suppose we wanted to reverse an array. Before going below the page think about how we can reverse it.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85097407-6aff2080-b1c5-11ea-87c6-7079c117d88b.jpeg
+" width="600" height="640">
+
+<p class = "text">We can have two pointers: one at the beginning and one at the end. We can switch the values of the pointers with each other 
+  <br> and increase the left pointer and decrease the right pointer. We can keep on doing that until they reach other.
+</p> 
+
+<div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/85097732-6ab35500-b1c6-11ea-961a-533c770fa124.jpeg" width="420" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/85097733-6be48200-b1c6-11ea-85cc-d64431a62194.jpeg" width="420" height="440"> </div>
+</div>
+
+<p class = "text">Now try to apply the reverse algorithm on this and see what happens.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85097909-093fb600-b1c7-11ea-8369-3ca7ea6968e7.jpeg
+" width="600" height="640">
+
+<p class = "text">As you can see in this case we have to stop when the pointers surpass cross each other. 
+  <br> We have two cases where we have to stop which are if the pointers cross each other or if they meet each other.
+  <br> Now try to implement it in Java. The implementation is located below.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85097909-093fb600-b1c7-11ea-8369-3ca7ea6968e7.jpeg
+" width="600" height="640">
+
+<p class = "text"> Here is the Java implementation.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85189852-9561e400-b280-11ea-9e19-a7fe14ee2ab6.jpeg
+" width="600" height="640">
+
+<p class = "problem"> Lets look at these two 1D arrays problems below. </p>
+
+<p class = "problem"> For this problem, we have to find the largest element of the array. </p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85100374-00061780-b1ce-11ea-98f3-87ea0f0fbee6.jpeg
+" width="600" height="640">
+
+<p class = "solutions"> Answer with explanation is at the bottom. </p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85100379-03010800-b1ce-11ea-823d-ad8595289708.jpeg
+   " width="600" height="640">
+
+<p class = "problem"> For this problem, we have to return an array that is rotated k times. </p>
+      
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85102041-c46d4c80-b1d1-11ea-90a9-8f03dcd78c2c.jpeg
+" width="600" height="640">
+
+<p class = "solutions"> Answer with explanation is at the bottom. </p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85102046-c6371000-b1d1-11ea-8da9-ab5887c93662.jpeg
+   " width="600" height="640">
+
+<h2 id="a2">Static Arrays vs Dynamic Arrays</h2>
+
+
+<p class="darker">
+  <a href="#home" class = "darker">Back to top</a>
+  <br>
+</p>
+
+<p class = "text"> Static Arrays and Dynamic Arrays are a lot similar, except size and its implementation in Java.
+</p> 
+
+<div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/85102155-0ac2ab80-b1d2-11ea-8f72-aa80d0a77cd6.jpeg" width="420" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/85102160-0c8c6f00-b1d2-11ea-9f2d-cbb07d9f517a.jpeg" width="420" height="440"> </div>
+</div>
+
+<p class = "text"> While dynamic arrays have the same Big O, its concept of insertions can be different. </p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85102358-7c9af500-b1d2-11ea-907a-765c098a0e4a.jpeg
+   " width="600" height="640">
+
+<p class = "problem"> Lets look at these two problems. The image contains all of the directions. </p>
+      
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85101703-0053e200-b1d1-11ea-8fc9-1e2d2cd78998.jpeg
+" width="600" height="640">
+
+<p class = "solutions"> Answer with explanation is at the bottom. </p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85101706-034ed280-b1d1-11ea-8083-9f282af3a2a3.jpeg
+   " width="600" height="640">
+
+<p class = "problem"> Here is another problem. </p>
+      
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85101750-237e9180-b1d1-11ea-8681-f8596e08f524.jpeg
+" width="600" height="640">
+
+<p class = "solutions"> Answer with explanation is at the bottom. </p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85101754-25e0eb80-b1d1-11ea-84c4-04492147561e.jpeg
+   " width="600" height="640">
+
+<h2 id="a3">2D Arrays</h2>
+
+
+<p class="darker">
+  <a href="#home" class = "darker">Back to top</a>
+  <br>
+</p>
+
+<p class = "text"> 2D arrays are arrays with an n*m dimension. It makes like a grid like array with values.
+</p> 
+
+<div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/84982200-2f505200-b104-11ea-8a1e-144858772b63.jpeg" width="420" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/84982203-30817f00-b104-11ea-902c-325648918b10.jpeg" width="420" height="440"> </div>
+</div>
+
+<h3>Declaring Values of 2D Arrays</h3>
+
+
+<p class = "text"> Here is how we can correctly set the values of the arrays. Also, we have set them at a valid range like we did in 1D arrays.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85098811-b0255180-b1c9-11ea-8e3b-8703ac94607d.jpeg" width="600" height="640">
+
+<h3>Traversal of 2D Arrays</h3>
+
+
+<p class = "text"> We can use a nested for loop to traverse them. For each sub array, we go through each element of the sub array.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85099103-80c31480-b1ca-11ea-8d84-5c70a0e2c21d.jpeg" width="600" height="640">
+   
+<h3>Applications of 2D Arrays: Find the number of Occurrences of a Target</h3>
+
+
+<p class = "text"> For this problem, we can use a nested for loop to traverse them and see if the value matches the target and if it does then we can increase the count. 
+  <br> Now try to implement in Java. The Java implementation is located below.
+</p> 
+
+<div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/85099526-a0a70800-b1cb-11ea-97d5-b85dca76f267.jpeg" width="420" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/85099534-a3a1f880-b1cb-11ea-94ff-7801a2b71b74.jpeg" width="420" height="440"> </div>
+</div>
+
+<p class = "text"> Java implementation is located below.
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85190309-2d61cc80-b285-11ea-99f7-f52bd041781a.jpeg" width="600" height="640">
+  
+<p class = "problem"> Lets look at this problem where we have to find the average of all of the elements. </p>
+      
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85100210-91c15500-b1cd-11ea-9568-bba4791b5499.jpeg
+" width="600" height="640">
+
+<p class = "solutions"> Answer with explanation is at the bottom. </p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85100103-40b16100-b1cd-11ea-8684-1ba8213bfc12.jpeg
+   " width="600" height="640">
+
+<h2 id="a4">Big O of Arrays</h2>
+
+
+<p class="darker">
+  <a href="#home" class = "darker">Back to top</a>
+  <br>
+</p>
+
+<p class = "problem"> This chart goes over the Big O of arrays.</p>
+      
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85102323-6ab95200-b1d2-11ea-899a-17f2fc4ec93b.jpeg
+" width="600" height="640">
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

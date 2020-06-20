@@ -1,96 +1,70 @@
+ <!-- Created by Fayed Raza -->
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stacks and Queues</title>
-</head>
-<style> 
- h1{
-    text-align: center;
-    font-size: 75px;
-    font-family: "Times New Roman", Times, serif;
- }
- h2{
-    text-align: center;
-    font-size: 200%;
-    font-family: "Times New Roman", Times, serif;
- }
- h3{
-    text-align: center;
-    font-size: 170%;
-    font-family: "Times New Roman", Times, serif;
- }
- h4{
-    text-align: center;
-    font-size: 150%;
-    font-family: "Times New Roman", Times, serif;
- }
- .text{
-    background-color: lightgrey;
-  text-align: center;
-  border: 3px solid rgb(223, 217, 217);
-  padding: 25px;
-margin: 20px;
-font-family: "Times New Roman", Times, serif;
-font-size: 110%;
-}
+<html lang="en">
  
- .problem{
-    background-color: rgb(235, 166, 166);
-  text-align: center;
-  border: 2px solid rgb(223, 217, 217);
-  padding: 25px;
-   margin: 20px;
-   font-size: 120%;
-   font-family: "Times New Roman", Times, serif;
-   font-weight: 825;
- }
- .solutions{
-    background-color: rgb(177, 177, 228);
-  text-align: center;
-  border: 3px solid rgb(223, 217, 217);
-  padding: 25px;
-margin: 20px;
-font-size: 115%;
-font-family: "Times New Roman", Times, serif;
-   font-weight: 700;
- }
- .image{
-    display: block;
-    margin-right: auto;
-margin-left: auto;
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Stacks and Queues</title>
 
-width: 50%;
- }
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
 
-  .darker{
-    text-align: center;
-  }
- .darker > a:hover{
-    filter: brightness(50%);
-  }
 
- .text{
-    background-color: lightgrey;
-  text-align: center;
-  border: 3px solid rgb(223, 217, 217);
-  padding: 25px;
-margin: 20px;
-font-size: 115%;
-   
- }
-.flex-container{
- display: flex;
-justify-content: center;
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
 
-}
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">  Arrays </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Big O</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Graphs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Hash Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/Website/LinkedList.html">  Linked Lists  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Searching and Sorting Methods</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="http://127.0.0.1:5500/Website/StacksAndQueues.html">Stacks and Queues <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Trees</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+    </div>
+    </nav>
 
-.flex-container > div {
-  margin: 10px;
-}
-</style>
-<body>
   <body style="background-color: rgb(223, 217, 217);">
     <h1 id="home">Stacks and Queues </h1>
 
@@ -594,5 +568,11 @@ justify-content: center;
             
           <img class = "image" src="https://user-images.githubusercontent.com/42160652/84110071-1ce26400-a9f2-11ea-9cb6-4f480163afd4.jpeg
           " width="640" height="640">
-    </body>
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>

@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+
+    <title> Trees </title>
+
+  
+  </head>
+  <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="frontpage.html">Home  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bigO.html">Big O </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="searchingandsorting.html">Searching and Sorting Methods   </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="arrays.html">  Arrays </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="LinkedList.html">  Linked Lists   </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="StacksAndQueues.html">Stacks and Queues  </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Trees <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hashtable.html">Hash Tables </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="graphs.html">Graphs  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="other.html"> Other Topics </a>
+            </li>
+          </ul> 
+        </div>
+      </nav>
+      
+    </div>
+    </nav>
+
+    
+<body style="background-color: rgb(223, 217, 217);">
+    <h1 id="home">Trees</h1>
+
+
+    <p class="text">If you already know about trees want to go into the specific sections then click one of the sections below. </p>
+    
+    <p class="darker">
+       <a href="#a1">1. Binary Search Trees</a>
+       <br>
+       <a href="#a2">2. AVL Trees</a>
+       <br>
+       <a href="#a3">3. Huffman Coding</a>
+       <br>
+       <a href="#a4">4. Heaps</a>
+       <br>
+       <a href="#a5">4. Big O</a>
+    </p>
+
+   <p class ="text">Trees are a data structures which a node has children and the children has children and so on. 
+     <br> There are trees that have three children or as many as they want. We will focus on a tree with two children.
+   </p>
+
+    <h2 id="a1">Binary Search Trees</h2>
+
+
+    <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+   </p>
+
+
+    <p class= "text">Binary Search Tree is a data structure where each node has up to two children.
+      <br> The left child of the node must be less than the parent node while the right child is greater than or equal to
+      the parent node.
+    </p>
+
+    <p class= "text">Lets see how we can insert values into a binary search tree.</p>
+
+    <h3>Insert Values into a Binary Search Tree</h3>
+
+
+    <p class = "text">We first insert 8 and it is a single node as of now. </p>
+      
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216521-5d77a100-b353-11ea-9f19-4fc06610b545.jpeg
+      " width="600" height="640">
+
+    <p class = "text">We insert 10 and it will go to the right of 8 since 10 > 8. </p>
+      
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216528-8304aa80-b353-11ea-8132-7a9f4cae733d.jpeg
+      " width="600" height="640">
+
+      <p class = "text">We then insert 2 and it will go to the left of 8 since 2 &lt; 8. </p>
+      
+      <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216565-eb538c00-b353-11ea-893c-12380fd213de.jpeg
+        " width="600" height="640">
+
+      <p class = "text">We then insert 1 and it will go to the left of 8 since 1 &lt; 8, but then it realizes that a child exists so 
+        <br> we would check if the child is greater than or less than 1. In this case it is greater than 1 so we insert it to the left of 2 as nothing exists.</p>
+      
+      <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216644-1be7f580-b355-11ea-8a82-126aa8993393.jpeg
+          " width="600" height="640">
+
+
+      <p class = "text"> Here we do the rest of the insetions.  </p>
+          
+        <div class="flex-container">
+          <div><img src="https://user-images.githubusercontent.com/42160652/85216634-ddead180-b354-11ea-818a-a2d12006f130.jpeg" width="420" height="440"></div>
+          <div><img src= "https://user-images.githubusercontent.com/42160652/85216635-e6dba300-b354-11ea-8f00-07f44a659bf8.jpeg" width="420" height="440"> </div>
+        </div>
+
+        <p class = "text"> The nodes that has no children or only one children have null as their children because the value 
+          of the children does not exist. </p>
+      
+        <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216899-58692080-b358-11ea-822c-97ca06009e19.jpeg
+          " width="600" height="640">
+
+          <p class = "text"> Here is the diagram of a binary search tree.
+             <i>Please note: I forgot to add that nodes that have the same value as the parent goes to the right. </i> </p>
+        
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216952-e6450b80-b358-11ea-8be9-9843bb0affad.jpeg
+            " width="600" height="640">
+
+          <h3> Skewed Trees </h3>
+
+
+          <p class = "text"> The trees on the bottom are called skewed trees which is where all of the nodes are basically lined up.</p>
+        
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216909-8189b100-b358-11ea-8f5f-faf908dc2dbd.jpeg
+            " width="600" height="640">
+
+            <h3>Coding Binary Search Trees</h3>
+
+
+            <p class = "text"> In the fields we have declared a val, left, and right. The val is the data that the node is holding and left and right is the children. 
+              <br> Left and right default is null as of now. 
+            </p>
+         
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216997-8307a900-b359-11ea-8e79-8ea567d51eea.jpeg
+             " width="600" height="340">
+  
+            <p class = "text"> In the fields we have declared a val, left, and right. The val is the data that the node is holding and left and right is the children. 
+              <br> Left and right default is null as of now. 
+            </p>
+         
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85216997-8307a900-b359-11ea-8e79-8ea567d51eea.jpeg
+             " width="600" height="340">
+
+             <p class = "text"> I have coded the insertion method. Basically, the value we want to insert, compares with the current nodes
+               <br> and then see if it is less than go left or otherwise go right. We keep on doing this till we found a child that does not
+               <br> exist and then we insert it there.
+               </p>
+          
+        <div class="flex-container">
+          <div><img src="https://user-images.githubusercontent.com/42160652/85217107-21e0d500-b35b-11ea-96f4-38023eaca30f.jpeg"420" height="440"></div>
+          <div><img src= "https://user-images.githubusercontent.com/42160652/85217108-24432f00-b35b-11ea-928a-3fe412b2b820.jpeg" width="420" height="440"> </div>
+          <div><img src= "https://user-images.githubusercontent.com/42160652/85217109-260cf280-b35b-11ea-8b0f-6b2eaad7d483.jpeg" width="420" height="440"> </div>
+        </div>
+
+        <h3>Searching for a Value in the Tree</h3>
+
+
+        <p class = "text"> Searching for a value in the tree has the same logic as the insertion except we just want to find the value.
+        </p>
+     
+       <img class = "image" src="https://user-images.githubusercontent.com/42160652/85217198-1cd05580-b35c-11ea-9c93-ef49944f50a1.jpeg
+         " width="600" height="340">
+
+         <h3>Deleting a Value in the Tree</h3>
+
+
+         <p class = "text">While searching for the node to delete is part of the method, the deletion part might be a bit tricky. 
+          <br> There are three cases we have to deal with in deletion whic are: no children, 1 child, two children. </p>
+
+          <p class = "text"> In the first case, the node we want to delete has no children. It is easy as we can use the two pointer method 
+            <br> and use the previous pointer and set the child to null. The Java implementation is located on the right.
+            <br> Assume the node has already been found and the prev is the parent of that node.
+          </p>
+
+          <div class="flex-container">
+            <div><img src= "https://user-images.githubusercontent.com/42160652/85217443-28714b80-b35f-11ea-8519-1338500196dd.jpeg" width="420" height="440"> </div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85217442-20191080-b35f-11ea-9092-bddc61da29fb.jpeg" width="600" height="440"></div>
+          </div>
+
+          <p class = "text"> In the second case, the node we want to delete has 1 child. It has a bit more steps but it should still be doable. 
+            <br> We can use the previous pointer and connect it to the child of the node we are about to delete. The Java implementation is located on the right.
+            <br> Assume the node has already been found and the prev is the parent of that node.
+          </p>
+
+          <div class="flex-container">
+            <div><img src= "https://user-images.githubusercontent.com/42160652/85217495-cc5af700-b35f-11ea-8f1e-8177957aa2d4.jpeg" width="420" height="440"> </div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85217492-c402bc00-b35f-11ea-86a2-1e2db5108f88.jpeg" width="600" height="440"></div>
+          </div>
+
+          <p class = "text"> In the third case, the node we want to delete has 2 children. It can a bit difficult at first but we use in order predecessor 
+            <br> find the node we want to switch with and delete. Basically, starting from the node we want to delete, we go left and then keep on going right till
+            <br> we found a node whose right is null. The Java implementation is located below. Assume the node has already been found and the prev is the parent of that node.
+          </p>
+
+          <div class="flex-container">
+            <div><img src= "https://user-images.githubusercontent.com/42160652/85217828-8b181680-b362-11ea-947c-8abdd2102d29.jpeg" width="420" height="440"> </div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85217829-8c494380-b362-11ea-879c-123ee95d2043.jpeg" width="600" height="440"></div>
+         </div>
+
+          <div class="flex-container">
+            <div><img src="https://user-images.githubusercontent.com/42160652/85217867-e64a0900-b362-11ea-859c-2b35fe58bf43.jpeg" width="600" height="440"></div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85217873-f19d3480-b362-11ea-8e3b-8330c6250ed7.jpeg" width="600" height="440"></div>
+          </div>
+
+          <p class = "text"> Here is the whole delete method in Java.
+          </p>
+       
+         <img class = "image" src="https://user-images.githubusercontent.com/42160652/85217909-3cb74780-b363-11ea-8567-d3c9eb83b09b.jpeg
+           " width="300" height="1000">
+
+           <h3>Traversing a Tree</h3>
+
+           
+           <p class="text">Lets just say we want to traverse a tree. We could use the the tree traversals, to go through all of the nodes of a tree.
+             <br> It is very useful for many binary search tree problems.
+           </p>
+           
+           <h4>In Order Traversal</h4>
+
+           <p class="text">In order traversal is a tree traversal where we first go throught the left subtree and check if children exists. 
+             <br> If it does then we do the samething again or else we check the node and move on to the right subtree and perform the same function.</p>
+    
+             <p class = "text"> We first go down and the left subtree and see that a child exists so we keep on going down. 
+                We want to go down till the left is null.
+            </p>
+
+             <div class="flex-container">
+              <div><img src="https://user-images.githubusercontent.com/42160652/85218129-4641af00-b365-11ea-9cdc-6cf04f91e923.jpeg" width="600" height="440"></div>
+              <div><img src="https://user-images.githubusercontent.com/42160652/85218168-99b3fd00-b365-11ea-9637-e3624cc52c81.jpeg" width="600" height="440"></div>
+            </div>
+     
+            <p class = "text"> Here we have print out the nodes we want to from the last node visited which is 3.
+              <br> And then it is 5. After that we visit 7 since we have to go to the right. 
+              <br> Then we go back to the last visited and go on the right if it does exist and so on.
+            </p>
+
+             <div class="flex-container">
+              <div><img src="https://user-images.githubusercontent.com/42160652/85218195-c7994180-b365-11ea-9550-b1fdb08bb6df.jpeg" width="300" height="440"></div>
+              <div><img src="https://user-images.githubusercontent.com/42160652/85218197-c8ca6e80-b365-11ea-844a-2dcf045f0350.jpeg" width="300" height="440"></div>
+              <div><img src="https://user-images.githubusercontent.com/42160652/85218199-cb2cc880-b365-11ea-881d-dd0cf54c7e7d.jpeg" width="300" height="440"></div>
+            </div>
+     
+            <p class = "text"> Here is the pre order and in order traversal. In pre order we first visit the node and then its left subtree and right.
+              <br> In post order traversal we first visit the left and right subtree and then the node it self.
+            </p>
+         
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218419-219b0680-b368-11ea-9cc7-53e1e65856ec.jpeg
+             " width="300" height="1000">
+  
+             <p class = "text"> Here is the Java implememtation for each of the traversals.
+            </p>
+         
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218442-53ac6880-b368-11ea-84b4-624d10f46e8a.jpeg
+             " width="300" height="1000">
+
+             <h3>Applications of Trees: Find the Kth Smallest</h3>
+  
+             <p class = "text"> Suppose we want to implemenet a method where we want to find the kth smallest of a tree.
+            </p>
+
+            <img class = "image" src="https://user-images.githubusercontent.com/42160652/85232698-f3044680-b3ce-11ea-8106-c739f0bdedf1.jpeg
+            " width="600" height="340">
+
+            <p class = "text"> We can use In Order Traversal and start with the smallest element. With that, we can use a counter and increase
+              <br> it by one for each element we meet. Once when we match the counter to k, we can return the value.
+            </p>
+
+            <img class = "image" src="https://user-images.githubusercontent.com/42160652/85232905-e680ed80-b3d0-11ea-96a6-f24d9046571c.jpeg
+            " width="600" height="340">
+
+            <p class = "text"> The four images below shows the whole process of the method. Now think about how we can do it in Java?
+          </p>
+
+           <div class="flex-container">
+            <div><img src="https://user-images.githubusercontent.com/42160652/85233012-8179c780-b3d1-11ea-8c7c-1e98c5d2dbce.jpeg" width="600" height="440"></div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85233015-82aaf480-b3d1-11ea-9d21-84ff1955523b.jpeg" width="600" height="440"></div>
+          </div>
+          
+          <div class="flex-container">
+            <div><img src="https://user-images.githubusercontent.com/42160652/85233054-b71eb080-b3d1-11ea-9cfe-c2c910ed90cb.jpeg" width="600" height="440"></div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85233058-bbe36480-b3d1-11ea-9646-8b76fc0988fe.jpeg" width="600" height="440"></div>
+          </div>
+
+          <p class = "text"> Java implememtation
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85312437-d4608700-b484-11ea-95aa-6219e8595071.jpeg
+          " width="600" height="340">
+
+             <h3>Applications of Trees:  Add all of the values that are in the range</h3>
+  
+             <p class = "text"> Suppose we want to implemenet a method where we want to find all of the nodes that are in the valid
+                range and then find the sum of them. 
+            </p>
+
+            <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218645-1052f980-b36a-11ea-96dd-9e10a8fe78a1.jpeg
+            " width="600" height="340">
+
+            <p class = "text"> 10 is in the valid range so we would want to keep it and then call the method on its children. 
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218716-d6362780-b36a-11ea-89d4-a71f2d708276.jpeg
+          " width="600" height="340">
+
+          <p class = "text"> We first see that 5 is not in the valid range but we should check if the right child is in the range. 
+           <br> We will not check the last child since if 5 &lt; 7 so why check the left child which is lower than 7. 
+           <br> In this case, the right child is the range so we add it in and 7 also has no children so we are done.
+          </p>
+
+          <div class="flex-container">
+            <div><img src="https://user-images.githubusercontent.com/42160652/85218734-0251a880-b36b-11ea-96b7-bfcfca47d6d4.jpeg" width="600" height="440"></div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85218736-0a114d00-b36b-11ea-9326-30a3f72fac59.jpeg" width="600" height="440"></div>
+          </div>
+
+          <p class = "text"> Now we are done with the left subtree so lets check the right subtree which is 15. We will add it in.
+            <br> We also will check the left and right but left is null and right is not in the range and its left is null.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218716-d6362780-b36a-11ea-89d4-a71f2d708276.jpeg
+          " width="600" height="340">
+
+          <p class = "text"> Java implementation is Located Below.
+          </p> 
+          
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85312509-ed693800-b484-11ea-867b-1c7f910482e7.jpeg" width="600" height="640">
+    
+           <h3>Binary Search Tree Problems</h3>
+
+
+           <p class = "problem">Now lets attempt the problems below. Use the following class below for the problems. </p>
+
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218869-6fb20900-b36c-11ea-89cf-6d1a732df89b.jpeg
+           " width="600" height="640">
+
+           <p class = "problem"> For this problem you have to get the height of a binary search tree. </p>
+
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218917-eea74180-b36c-11ea-8652-c9e7941e9624.jpeg
+           " width="600" height="640">
+       
+           <p class = "solutions">Answer with explanation is at the bottom.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218919-efd86e80-b36c-11ea-8df7-c99c6169cb89.jpeg
+           " width="600" height="640">
+
+           <p class = "problem"> For this problem you have reverse a binary search tree. </p>
+
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218887-a4be5b80-b36c-11ea-82b8-ddd6ae34d8d3.jpeg
+           " width="600" height="640">
+       
+           <p class = "solutions">Answer with explanation is at the bottom.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218889-a5ef8880-b36c-11ea-80ee-9a84e3b3f30b.jpeg
+           " width="600" height="640">
+
+           <p class = "problem"> For this problem you have to turn a linked list to a binary search tree. </p>
+
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85219008-fe735580-b36d-11ea-8b75-df5cafc284bf.jpeg
+           " width="600" height="640">
+       
+           <p class = "solutions">Answer with explanation is at the bottom.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85218959-73925b00-b36d-11ea-9dcc-ad1ab3daca6f.jpeg
+           " width="600" height="640">
+
+           <h2 id="a2">AVL Trees</h2>
+
+
+           <p class="darker">
+            <a href="#home" class = "darker">Back to top</a>
+            <br>
+         </p>  
+
+
+           <p class="text"> AVL Trees are just like BST as the child lower than the parent goes on the left and child greater
+             <br> than or equal to the parent goes on the right. But, it is also a self-balancing tree.
+           </p>
+
+           <p class = "text">Before we can go over the actual the AVL we need to go over some other concepts.</p>
+
+           <p class = "text">This is how we can determine the height of the tree.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85249777-afd3c300-b422-11ea-828c-4cb66baccfb4.jpeg
+           " width="600" height="640">
+
+           <p class = "text">Here is the balance factors we will use in the AVL Tree. Later on you can see how important it is.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85249842-d5f96300-b422-11ea-80c5-aed981bc2dc5.jpeg
+           " width="600" height="640">
+       
+           <p class = "text">Here is the how we can the determine the balance factor of a node.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85249925-0fca6980-b423-11ea-8833-d75c980cdad7.jpeg
+           " width="600" height="640">
+
+           <p class = "text">Here is the diagram of the tree. This will be useful in what is comming up next. </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85250010-4c966080-b423-11ea-8b17-cc4bb2fb6024.jpeg
+           " width="600" height="640">
+
+          <p class = "text"> So this is how we can determine the difference between two subtrees. The height of an empty tree (null) is -1.
+           </p>
+ 
+           <div class="flex-container">
+            <div><img src="https://user-images.githubusercontent.com/42160652/85250475-aea39580-b424-11ea-80f7-e0e11f795f9f.jpeg" width="600" height="440"></div>
+             <div><img src="https://user-images.githubusercontent.com/42160652/85250227-f83fb080-b423-11ea-8e1f-c0d5a9e8dc42.jpeg" width="600" height="440"></div>
+             <div><img src="https://user-images.githubusercontent.com/42160652/85250232-faa20a80-b423-11ea-81d3-abcfdefeb037.jpeg" width="600" height="440"></div>
+           </div>
+
+           <p class = "text">In order for an AVL Tree to be valid (balanced) the difference must be 1 or 0. The example below is not valid.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85250655-2e316480-b425-11ea-8fb9-108185efad8c.jpeg
+           " width="600" height="640">
+
+           <h3>Rotating AVL Trees</h3>
+
+
+           <p class = "text">Right now we have an unbalanced tree and we need to make it balanced. Think about what could we do? </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85250829-a730bc00-b425-11ea-9552-4f4a9c571afa.jpeg
+           " width="600" height="640">
+
+           <p class = "text">We can rotate the tree to the left and now it is balanced. This is called the right right case.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85251004-232b0400-b426-11ea-85d0-df089d337fa0.jpeg
+           " width="600" height="640">
+
+           <p class = "text">Here is the left left case which is similar to the right right case. </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85251199-b106ef00-b426-11ea-8683-7cfcc07d057a.jpeg
+           " width="600" height="640">
+
+           <p class = "text">Now suppose we have to do a rotation where the subtree is not a straight line. Think about how could we solve this issue? </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85251234-caa83680-b426-11ea-93b3-80304a7b69a3.jpeg
+           " width="600" height="640">
+
+           <p class = "text">We rotate half of the tree to the left. It is not balanced but now it is now a left left rotation which we know how to do. </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85251327-0fcc6880-b427-11ea-9927-54ff27824f51.jpeg
+           " width="600" height="640">
+
+           <p class = "text"> Now the tree is balanced. </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85251619-c3cdf380-b427-11ea-8083-ae5d791dcc79.jpeg
+           " width="600" height="640">
+
+           <p class = "text"> This is the right left rotation which similar to left right rotation. </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85251670-eb24c080-b427-11ea-9295-103e647ffea6.jpeg
+           " width="600" height="640">
+
+           <p class="text"> These are all of the rotations we have gone over: </p>
+
+           <p class="text">1. Left Left Rotation</p>
+           <br>
+           <p class="text">2. Right Right Rotation</p>
+           <br>
+           <p class="text">3. Left Right Rotation</p>
+           <br>
+           <p class="text">4. Right Left Rotation</p>
+
+           <h4>Rotating Nodes with Children</h4>
+
+           <p class = "text"> Suppose this tree is not balanaced so we have to rotate it. But what if the node has children? </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85252724-7f902280-b42a-11ea-8eef-47a90dfb1c9b.jpeg
+           " width="600" height="640">
+
+           <p class = "text"> 7 will sift up but 6 can become the child of 5 since 6 &lt; 7 so it can go left. 
+             <br> And then it can go to the right of 5 since 6 &gt; 5.  </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85252755-95054c80-b42a-11ea-8658-1513a039aa07.jpeg
+           " width="600" height="640">
+
+           <p class = "text"> 7 will sift up but 6 can become the child of 5 since 6 &lt; 7 so it can go left. 
+            <br> And then it can go to the right of 5 since 6 &gt; 5.  </p>
+      
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85252755-95054c80-b42a-11ea-8658-1513a039aa07.jpeg
+          " width="600" height="640">
+
+          <h4>Rotating AVL Tree Problems</h4>
+
+          <p class = "problem"> The following tree is not balanced. Rotate it. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85253439-288b4d00-b42c-11ea-8675-7b194f711fab.jpeg
+          " width="600" height="640">
+
+          <p class = "solutions"> Answer with explanation is at the bottom. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85253526-64261700-b42c-11ea-9d07-1f751cd00566.jpeg
+          " width="600" height="640">
+
+          <p class = "problem"> The following tree is not balanced. Rotate it. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85253565-7f912200-b42c-11ea-849d-7006efe8ef54.jpeg
+          " width="600" height="640">
+
+          <p class = "solutions"> Answer with explanation is at the bottom. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85253585-86b83000-b42c-11ea-8a42-a5f163dfbacb.jpeg
+          " width="600" height="640">
+
+          <p class = "problem"> The following tree is not balanced. Rotate it. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85253697-bf580980-b42c-11ea-8202-b2f1f11b8d7f.jpeg
+          " width="600" height="640">
+
+          <p class = "solutions"> Answer with explanation is at the bottom. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85253698-c0893680-b42c-11ea-818a-2353dc075bdc.jpeg
+          " width="600" height="640">
+
+          <h2 id="a3">Huffman Coding</h2>
+
+
+          <p class="darker">
+            <a href="#home" class = "darker">Back to top</a>
+            <br>
+         </p>
+    
+         
+          <p class="text">Huffman Coding is a type of optimal prefix code which is used for lossless data compression. Huffman trees are used for this. </p>
+
+          <p class = "text"> As you can see here are the letters sorted in asscending order of frequency. IT ALWAYS HAS TO BE SORTED IN THIS WAY. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85255707-ce40bb00-b430-11ea-8b23-011bd4548b76.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> We first pop out two elements from the symbols queue and combine it to add it in the tree queue. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85255919-35f70600-b431-11ea-876a-e89dba05a327.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> Now we pick the next smallest element by using peek and combine it into a tree and enqueue it. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85256315-fbda3400-b431-11ea-8e97-849369bf048c.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> We do it again here. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85256463-42c82980-b432-11ea-962d-de0382809d67.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> We do it again here. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85256463-42c82980-b432-11ea-962d-de0382809d67.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> We do it again here. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85256463-42c82980-b432-11ea-962d-de0382809d67.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> Here are the remaining steps.
+          </p>
+
+          <div class="flex-container">
+           <div><img src="https://user-images.githubusercontent.com/42160652/85256768-b79b6380-b432-11ea-8380-fcc58dcfcf12.jpeg" width="600" height="440"></div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85257080-3c867d00-b433-11ea-9c72-0bbcf674cf59.jpeg" width="600" height="440"></div>
+            <div><img src="https://user-images.githubusercontent.com/42160652/85257080-3c867d00-b433-11ea-9c72-0bbcf674cf59.jpeg" width="600" height="440"></div>
+          </div>
+
+          <p class = "text"> Here is the final result. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85257285-94bd7f00-b433-11ea-9d97-f4a311d21094.jpeg"
+          width="600" height="640">
+          
+          <p class = "text"> Here is a diagram of a Huffman Tree. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85257559-0990b900-b434-11ea-89bb-9f2438e0043b.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> This is how we can code characters using a Huffman Tree. </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85257649-2fb65900-b434-11ea-9204-e9ab089bbf1e.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> This is how we can find the average code length of a tree. For each letter we can multiply the number 
+            <br> of bits by the frequency. Then we can combine the result for each letter to find the average code length; </p>
+       
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85257800-68eec900-b434-11ea-880d-ae5e198de202.jpeg"
+          width="600" height="640">
+
+          <p class = "text"> This is how we can decode to a String. At the first number, we start at the top
+            <br>and go down by the following numbers till we reach to a dead end (dead end is a letter). The we write that letter
+           <br>and then at the next number (unless we there are no more numbers left) start at the top and follow the next numbers until
+          you reach the dead end. </p>
+       
+          <div class="flex-container">
+            <div><img src="https://user-images.githubusercontent.com/42160652/85258091-d8fd4f00-b434-11ea-9025-6c1cafc0ac73.jpeg" width="600" height="440"></div>
+             <div><img src="https://user-images.githubusercontent.com/42160652/85258101-dac71280-b434-11ea-8c36-79b4360139c1.jpeg" width="600" height="440"></div>
+             <div><img src="https://user-images.githubusercontent.com/42160652/85258166-fd592b80-b434-11ea-85a8-7170fdf79607.jpeg" width="600" height="440"></div>
+           </div>
+
+           <p class = "text"> Encoding a string is just like encoding one character, but just many times. </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85258689-e9fa9000-b435-11ea-8f39-1676f954f32b.jpeg"
+           width="600" height="640">
+
+           <p class = "text"> Lets take a look at this problem below. Try it on your own and then see if you did it correctly or not. </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85258814-11e9f380-b436-11ea-9e21-fab14a92abbb.jpeg"
+           width="600" height="640">
+
+           <p class = "text"> Basically encoded is determined from the number of bits in the huffman tree for each character in the string.
+             <br> And for the unencoded multiply the average number of bits given in the problem by the number of characters.
+           </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85258818-13b3b700-b436-11ea-84a4-aa847ea6a9cb.jpeg"
+           width="600" height="640">
+
+           <p class = "text"> With that we can also determine the compression factor as shown in the calculations below.
+          </p>
+      
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85259549-427e5d00-b437-11ea-97e6-a997bc959572.jpeg"
+          width="600" height="640">
+
+          <h2 id="a4">Heaps</h2>
+
+
+          <p class="darker">
+            <a href="#home" class = "darker">Back to top</a>
+            <br>
+         </p>
+      
+
+          <p class ="text">Heap is like a complete binary tree and priority queue had a baby. Basically it is a tree where all of the nodes
+            <br> are filled from left to right. And always the the highest parent is the minimum or maxium element of a tree.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85344501-dabf2500-b4bd-11ea-9e80-812bf7845baf.jpeg"
+          width="600" height="640">
+
+          <p class ="text">Heap is like a complete binary tree and priority queue had a baby. Basically it is a tree where all of the nodes
+            <br> are filled from left to right. And always the the highest parent is the minimum or maxium element of a tree.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85344501-dabf2500-b4bd-11ea-9e80-812bf7845baf.jpeg"
+          width="600" height="640">
+
+          <p class ="text">As you can see, all of the nodes of a heap must be filled from left to right except for the last level.
+            In the last level it does not have to be fully filled but if there are nodes then it should be filled from left to right.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85345108-93d22f00-b4bf-11ea-8fa5-52d91e3441fa.jpeg"
+          width="600" height="640">
+
+          <p class ="text">There are two types of heaps: min heap and max heap. In the min heap the smallest element is on the top while in
+            <br> the max heap the largest element is on the top.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85345235-fd523d80-b4bf-11ea-8dd7-309a92bed474.jpeg"
+          width="600" height="640">
+
+          <h3>Insertion in Heaps</h3>
+
+
+          <p class ="text">As of now, I have inserted 27.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85345611-de07e000-b4c0-11ea-9f19-3b4dc890f103.jpeg"
+          width="600" height="640">
+
+          <p class ="text">Now I have inserted 20 and we have to compare with 27 to see if the parent is less than the newly inserted 
+            <br> node or not. In this case the parent is greater so we are fine.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85345662-098aca80-b4c1-11ea-942f-d399e6691556.jpeg"
+          width="600" height="640">
+
+          <p class ="text">After inserting 45, we compare 45 with 20 and we realize that the parent is less than the newley inserted node.
+            <br> This makes the heap invalid so now we need to think of how we can make the heap valid.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85345781-65edea00-b4c1-11ea-84e1-cf1fe4618e60.jpeg"
+          width="600" height="640">
+
+          <p class ="text">We can use a method called sift up. Basically, after seeing that the parent is less than the newley inserted node.
+            <br> We swap 45 with 27. Then we move up to 45 to check if 45's parent is greater too. In this case, the parent does not exist, so we can 
+            stop.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85345934-df85d800-b4c1-11ea-9338-a19bfa6b5028.jpeg"
+          width="600" height="640">
+
+          <p class ="text">After inserting 100, check if the tree is valid or not and try to fix it if the tree is not valid.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85346063-499e7d00-b4c2-11ea-838c-206e652c99b5.jpeg"
+          width="600" height="640">
+
+          <p class ="text"> In this case it is, and we had to swap twice because we first swap with with 100 and 20, but also we had to
+            <br> swap with 100 and 45 since 100 is obviously not less than 45.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85346177-a7cb6000-b4c2-11ea-83ef-44e7c3d15513.jpeg"
+          width="600" height="640">
+
+          <p class ="text"> Now try to do the next few insertions shown on the image below.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85346430-52dc1980-b4c3-11ea-8e9d-1744ba16a991.jpeg"
+          width="600" height="640">
+
+          <p class ="text"> For the first insertion, we had to one swap. For the second one, we did only one swap. 
+            For the last insertion, we did two swaps.
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85348858-d4837580-b4ca-11ea-9199-1b8bad3bac42.jpeg"
+          width="600" height="640">
+
+          <p class ="text"> For the first insertion, we had to one swap. For the second one, we did only one swap. 
+            For the last insertion, we did two swaps. 
+          </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85348858-d4837580-b4ca-11ea-9199-1b8bad3bac42.jpeg"
+          width="600" height="640">
+
+          <p class ="text"> The concept is similar to min heaps as when we insert then we will compare with the parent to see if the parent
+            <br> is smaller than the child. If it is not then we will swap and do it so on till we reach the end or parent is smaller than the child.
+          </p>
+
+          <p class ="text"> Here is pesudcode of insertion in heaps.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350763-021eed80-b4d0-11ea-9e34-80dc3b532141.jpeg"
+           width="600" height="640">
+
+          <h3>Deletion in Heaps</h3>
+
+          <p class ="text"> When we always call delete in a heap, in the max heap, the largest element of the treegets deleted and in the 
+            <br> min heap, the smallest element of the tree gets deleted.
+         </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85349560-c6ceef80-b4cc-11ea-9047-501588a644da.jpeg"
+          width="600" height="640">
+          
+          <p class ="text"> In deletion, we take the value of the last node from the last level of the tree and switch it with the top. 
+            Then we delete that node.
+         </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85349609-f120ad00-b4cc-11ea-825c-072c8af5be89.jpeg"
+          width="600" height="640">
+
+          <p class ="text"> We now got rid of the maxium value, but the heap is not valid.
+         </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85349784-570d3480-b4cd-11ea-82ba-87d411b9bf5a.jpeg"
+          width="600" height="640">
+
+          <p class ="text"> We now got rid of the maxium value, but the heap is not valid. Think about what could we do to solve this issue?
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85349784-570d3480-b4cd-11ea-82ba-87d411b9bf5a.jpeg"
+           width="600" height="640">
+
+          <p class ="text"> We can use sift down which is like sift up but we will go down the tree to switch the values around.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350113-3a253100-b4ce-11ea-9a1d-aba1aca33eb9.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> We can use sift down which is like sift up but we will go down the tree to switch the values around.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350113-3a253100-b4ce-11ea-9a1d-aba1aca33eb9.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> Now try deletion on this heap. Answer is at the bottom.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350280-be77b400-b4ce-11ea-9387-5e97949ac78f.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> So after 7 becomes the head and then we will perform two swaps.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350329-dea77300-b4ce-11ea-816d-5aee3eda2c5e.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> Here are some formulas use to find nodes' child or parent. This will be useful when we do the coding implementation.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350613-8fae0d80-b4cf-11ea-8c7e-63375530496c.jpeg"
+           width="600" height="640">
+
+
+           <p class ="text"> Here are some formulas use to find nodes' child or parent. This will be useful when we do the coding implementation.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350613-8fae0d80-b4cf-11ea-8c7e-63375530496c.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> Here is how insertion works on a min heap.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85356195-59c35600-b4dc-11ea-9710-8d8afc21c915.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> Here is how deletion works on a min heap.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85356292-a1e27880-b4dc-11ea-8573-c2b8b90406de.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> Here is pesudcode of deletion in heaps.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350728-e74c7900-b4cf-11ea-8583-b6775895f771.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> Here is the insert and delete method implememted in Java. I used ArrayLists to implement it in heaps for the puposes of this example. 
+          </p>
+  
+          <div class="flex-container">
+            <div><img src="https://user-images.githubusercontent.com/42160652/85441530-37bde800-b55d-11ea-9797-ac18889b7d98.jpeg" width="600" height="440"></div>
+             <div><img src="https://user-images.githubusercontent.com/42160652/85441548-3ab8d880-b55d-11ea-834a-7838c06b8759.jpeg" width="600" height="440"></div>
+           </div>
+
+           <p class ="text"> Here is pesudcode of deletion in heaps.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85350728-e74c7900-b4cf-11ea-8583-b6775895f771.jpeg"
+           width="600" height="640">
+
+           <h3>Applications of Heaps: Merging Two Max Heaps</h3>
+
+
+           <p class ="text"> If you are going to use heaps for projects and/or interview problems, you will most likely
+             use a priority queue. So here the default priority queue is a min heap while the other one is a max heap.
+          </p>
+ 
+           <img class = "image" src="\https://user-images.githubusercontent.com/42160652/85441698-620fa580-b55d-11ea-9c95-a590a22ab717.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> We can heapify, where we start around the middle value. You can use the formual (number of nodes)/2. 
+             <br> Basically, the middle node usually has children.
+          </p>
+ 
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85351025-b3258800-b4d0-11ea-947c-96b99c9fcabe.jpeg"
+           width="600" height="640">
+
+           <p class ="text"> We have to check if the child greater than the parent if it is then we swap and then apply it to the child.
+             <br> In this case, the child has no children of its own so we are done.
+         </p>
+
+          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85352904-0a2d5c00-b4d5-11ea-9328-987fc8f20706.jpeg"
+          width="600" height="640">
+
+          <p class ="text"> We have to check if the child greater than the parent if it is then we swap and then apply it to the child.
+            <br> In this case, the child has no children of its own so we are done.
+        </p>
+
+         <img class = "image" src="https://user-images.githubusercontent.com/42160652/85352904-0a2d5c00-b4d5-11ea-9328-987fc8f20706.jpeg"
+         width="600" height="640">
+
+          <p class ="text"> Here is the rest of the heapify process
+        </p>
+
+        <div class="flex-container">
+          <div><img src="https://user-images.githubusercontent.com/42160652/85353275-d6066b00-b4d5-11ea-8810-4f2e1878d631.jpeg" width="600" height="440"></div>
+           <div><img src="https://user-images.githubusercontent.com/42160652/85353279-d868c500-b4d5-11ea-9f27-88212d570021.jpeg" width="600" height="440"></div>
+           <div><img src="https://user-images.githubusercontent.com/42160652/85353332-f6362a00-b4d5-11ea-8852-fbe5278b3b70.jpeg" width="600" height="440"></div>
+         </div>
+
+         <p class ="text"> Here is the Java implememtation of this program.
+      </p>
+
+       <img class = "image" src="https://user-images.githubusercontent.com/42160652/85441195-cc741600-b55c-11ea-85cc-c2107233c8d1.jpeg"
+       width="600" height="640">"
+
+       <h3>Heap Problems</h3>
+
+       <p class = "problem"> For this problem you have to return the kth largest of an unsorted array using a heap. 
+         <br> <i>Please Note: I made a mistake on the image. I meant kthLargest instead of kthSmallest.</i>
+      </p>
+
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85353692-da7f5380-b4d6-11ea-9f47-0971ed3433ac.jpeg
+           " width="600" height="640">
+       
+           <p class = "solutions"> We can use a minHeap and for each element we add it into the heap. We check if the size of the heap
+              is greater than k. If it is is then we pop one out as we know that it can not be the kth largest. At the end the parent 
+              of the final heap is kth largest.
+           </p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85353866-406bdb00-b4d7-11ea-89d7-b84eecacde4b.jpeg
+           " width="600" height="640">
+
+          <h2 id="a5">Big O of Trees</h2>
+
+
+          <p class="darker">
+            <a href="#home" class = "darker">Back to top</a>
+            <br>
+         </p>
+    
+           <h3>Big O of Binary Search Trees</h3>
+
+
+          <p class = "text"> On average the Big O of going through a tree is O(log n) as we are eliminating paths. However, the worst
+            case is O(n) as we will go through a skewed tree. Going down a skewed tree is just going through a linked list.
+           </p>
+ 
+           <div class="flex-container">
+             <div><img src="https://user-images.githubusercontent.com/42160652/85232368-5b9df400-b3cc-11ea-8ac7-0cf21e3b0d43.jpeg" width="600" height="440"></div>
+             <div><img src="https://user-images.githubusercontent.com/42160652/85232370-5f317b00-b3cc-11ea-9a29-6aa3925f8498.jpeg" width="600" height="440"></div>
+           </div>
+
+           <p class = "text">All of the tree traversals has a big o of O(n) because in the worst case we will go through n nodes.</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85232467-fac2eb80-b3cc-11ea-8fda-a69abbd4cb90.jpeg
+           " width="600" height="640">
+
+           <p class = "text">Here is the Big O Chart for Binary Search Trees</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85232599-137fd100-b3ce-11ea-815a-fd08189f23e1.jpeg
+           " width="600" height="640">
+
+           <h3>Big O of AVL Trees</h3>
+
+
+           <p class = "text">Here is the Big O Chart for AVL Trees</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85253923-24136400-b42d-11ea-9b50-e0db0731acf8.jpeg
+           " width="600" height="640">
+           
+           <h3>Big O of Heaps</h3>
+
+
+           <p class = "text">Here is the Big O Chart for Heaps</p>
+       
+           <img class = "image" src="https://user-images.githubusercontent.com/42160652/85446805-e7498900-b562-11ea-8915-7948b6ee4a54.jpeg
+           " width="600" height="640">
+       
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

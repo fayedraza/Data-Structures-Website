@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+
+    <title> Big O </title>
+
+  
+  </head>
+  <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="frontpage.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Big O <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="searchandsorting.html">Searching and Sorting Methods</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="arrays.html">  Arrays  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="LinkedList.html">  Linked Lists  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="StacksAndQueues.html">Stacks and Queues</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trees.html">Trees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hashtable.html">Hash Tables</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="graphs.html">Graphs  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="other.html"> Other Topics </a>
+            </li>
+          </ul> 
+        </div>
+      </nav>
+      
+    </div>
+    </nav>
+
+    
+<body style="background-color: rgb(223, 217, 217);">
+
+  <h1 id="home"> Big O </h1>
+
+  <p class="text"> Big O is a way to measure an algorithm's space and time complexity.</P>
+
+    <p class="text">If you already know about Big O and want to go into the specific sections then click one of the sections below.</p>
+    <!--  Helps the user goes to the specific section they want to go -->
+     <p class="darker">
+       <a href="#a1">1. Time Complexity </a>
+       <br>
+       <a href="#a2">2. Space Complexity</a>
+       <br>
+    </p>
+
+    <h2 id="a1">Time Complexity</h2>
+
+
+    <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+    </p>
+
+    <div class="container">
+   <p class="text">
+    Suppose you want to find the fastest way to get to a store. Which is the best way?
+    <li> Bus </li>
+    <li> Ask someone to take you</li>
+    <li> Uber </li>
+
+   </p>
+  </div>
+
+   <h3> Big O Q & A</h3>
+
+
+   <p class="text">
+    Q: How would you choose the best way?
+    <br>
+    <br>
+    A: The one that is the fastest.
+   </p>
+
+   <p class="text">
+    Q: How to measure efficiency of these algorithms?
+    <br>
+    <br>
+    A: Measure the space complexity and the time complexity of the algorithm. These two complexities will be explained later.
+   </p>
+
+   <p class="text">
+    Q: What is time complexity?
+    <br>
+    <br>
+    A: The execution time of the algorithm that is denoted by the letter O (Big O).
+   </p>
+
+   <p class="text">
+    Q: What is space complexity?
+    <br>
+    <br>
+    A: The amount of space of the algorithm during execution that is denoted by the letter O (Big O).
+   </p>
+
+   <p class = "text">This is a chart showing all of the Big O complexities. 
+    The complexities that are horrible are more dominant but slower than the other terms.
+   </p>
+
+ <img class = "middle" src="https://user-images.githubusercontent.com/42160652/71653256-851d7300-2cf9-11ea-9e85-cc1fc52d36a5.jpeg
+" width="600" height="440">
+
+<h3>Finding the Big O</h3>
+
+<p class="text">
+  Simplfying Big O Rules
+
+  <p class="text">1. We will get rid of constants such as numbers like 1,2, or etc, so 3n would turn to n.
+  </p>
+  <p class="text">2. We will get rid of less dominant terms such as, if there was n^2 + n, we would get rid of n since it is less dominant.
+    Also in cases like n + 3 it will be O(n) since 3 is just O(1) and it is less dominant than O(n). </p>
+</p>
+
+<p class = "text"> In this example we got a runtime like 2n+1 and now we want to simplfy it into Big O. First we will get rid of the less 
+ dominant terms.
+ <br>
+ O(2n <strike> + 1 </strike>)
+<br>
+1 gets dropped since non dominant terms get dropped
+<br>
+O(<strike>2</strike>n)
+<br>
+2 gets dropped since constants get dropped
+<br>
+<b>Answer: O(n)</b>
+</p>
+
+<p class = "text"> In this example we got a runtime like n^2+n+1 and now we want to simplfy it into Big O. First we will get rid of the less 
+  dominant terms.
+  <br>
+  O(n^2 + n <strike> + 1 </strike>)
+ <br>
+ 1 gets dropped since non dominant terms get dropped
+ <br>
+ O(n^2<strike> + n</strike>)
+ <br>
+ n gets dropped since n is a less dominant term
+ <br>
+ <b>Answer: O(n^2)</b>
+ </p>
+
+ <h3>Big O Runtimes</h3>
+
+
+ <h4>O(1) Runtime</h4>
+
+
+ <p class="text">The O(1) runtime is always constant. No matter what the input it, the algorithm/method will always run in the same amount of time.</p>
+
+ <p class="text"> <b>Examples of Java statements with O(1) runtime</b> 
+  <br>
+  <li class="text"> int x = 7; </li>
+  <li class="text"> int b = 27*89;</li>
+  <li class="text"> String s = "hi";</li>
+  <li class="text"> System.out.println(a[0]); </li>
+<br>
+</p>
+
+<p class="text">
+  <b>Example of an algorithm that has O(1) runtimne (Pesudocode)</b>
+<br>
+                     READ number
+<br>
+                   DISPLAY number * 3
+<br>
+</p>
+
+<p class="text">
+  <b>Example of an algorithm that has O(1) runtimne (Pesudocode)</b>
+<br>
+                     READ number
+<br>
+                   DISPLAY number * 3
+<br>
+</p>
+<p class="text">
+  Despite the value of the number, it will always print that number multiplied by three meaning the time is consant which is why the runtime is O(1).
+</p>
+
+<p class="text">
+  <b>Example of an algorithm that has O(1) runtimne (Java)</b>
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85627490-94dc9b00-b63c-11ea-8b6e-55ae93c757a0.jpeg
+" width="800" height="340">
+
+<h4>O(n) Runtime</h4>
+
+
+<p class="text">The O(n) runtime describes an algortihm that increases linearly. The program depends on the size of n.</p>
+
+<p class="text">
+  <b>Classic examples of O(n) runtime</b>
+
+  <li class="text">Tranversing Through an Array</li>
+  <li class="text">Tranversing Through a Link List</li>
+  <li class="text">In Order Traversal</li>
+  <li class="text">Heapify</li>
+</p>
+<p class="text">
+  <b>Example of an algorithm that has O(n) runtimne (Pesudocode)</b>
+<br>
+         FOR each element in that array
+<br>
+              DISPLAY that element  
+<br>
+        ENDFOR
+<br>
+</p>
+
+<p class="text">Since it will go through every element, so it depends upon how long the array is. If the 
+  length of an array is one, it will take quickly to go through the array. However, 
+  if the length is 1000, it will take a lot longer. In addition, it increases linearly 
+  as the length of an array increases by 1 its time increases by a bit too.</p>
+
+  <p class="text">
+    Example of an algorithm that has O(n) runtimne (Java)
+  </p>
+ 
+  <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85632948-4502d180-b646-11ea-9bc9-57e490561dee.jpeg
+" width="800" height="340">
+
+<p class="text">
+  Example of an algorithm that has O(n) runtimne (Java)
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85632948-4502d180-b646-11ea-9bc9-57e490561dee.jpeg
+" width="800" height="340">
+
+<h4>O(n^2) Runtime</h4>
+
+<p class="text">
+  The O(n^2) runtime describes an algorithm that runs in quadratic
+   time. For instance, an algorithm that has an input of 10 runs 100 times.
+  </p>
+
+  <p class="text">
+    <b>Classic examples of O(n^2) runtime</b>
+
+    <li class="text">Insertion Sort</li>
+    <li class="text">Selection Sort</li>
+  </p>
+  <p class="text">
+    <b>Example of an algorithm that has O(n^2) runtimne (Pesudocode)</b>
+  <br>
+       For each row
+  <br>
+        For each element in that row 
+  <br>
+         DISPLAY that element
+  <br>
+      ENDFOR
+  <br>
+        ENDFOR
+  <br>
+  </p>
+
+  <p class="text">
+    <i>Note: Array is n by n</i>
+
+This is an example of a nested for loop. Since it is going through every elment for 
+each row, its run time is O(n^2). If the array length is three rows with three elements 
+in each row then it will run nine times because 3^2 is 9.
+  </p>
+  
+  <p class="text">
+    Example of an algorithm that has O(n^2) runtimne (Java)
+  </p>
+  
+  <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85633788-f0605600-b647-11ea-900a-2688acba6c3d.jpeg
+  " width="800" height="340">
+
+  <h4>O(log n) Runtime</h4>
+
+<p class="text">
+ 
+The O(log n) runtime describes an algorithm that runs log n times. Just remember that in computer science when we talk about 
+log n the base is always 2. If an input is 16 then it will run 4 times.
+  </p>
+
+  <p class="text">
+    <b>Classic examples of O(log n) runtime</b>
+  
+    <li class="text">Binary Search</li>
+    <li class="text"> AVL Tree</li>
+  </p>
+
+  <p class="text">This is a binary tree. Starting at the top which is 2 and as we choose to go left or right, we are eliminating the other half.
+     For instace, if we choose to pick 7 instead of 5 then we will omit 5, 9, and 4.
+  </p>
+  <p class="text">
+    Look at the number of times the while loop ran.
+    It is dividing by 2 every time it is passed into the while loop meaning that it will run log n times assuming that n is x.
+  </p>
+  <p class="text">
+    <b>Example of an algorithm that has O(log n) runtimne (Pesudocode)</b>
+  <br>
+        READ x
+  <br>
+        WHILE x is greater than 0
+  <br>
+           SET x as x divided by 2
+  <br>
+       ENDWHILE
+  </p>
+
+  <p class = "text"> Example of an algorithm that has O(log n) runtimne (Java). The reason is when we take one path we 
+    never go to the other path. And so on. On the image on the right, we end up touching 27, 40, and 30. We touched
+    three nodes out of seven nodes. Log base 2 of 7 is similar to 3 which is the reason why the big o of searching on an
+    AVL Tree is O(logn)
+  </p> 
+  
+  <div class="flex-container">
+    <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85636482-b47cbf00-b64e-11ea-8251-99b2cf290c5e.jpeg" width="620" height="640"></div>
+    <div><img id="right" src= "https://user-images.githubusercontent.com/42160652/85644494-1811e700-b665-11ea-8297-425aec7d9377.jpeg" width="620" height="640"> </div>
+  </div>
+ 
+  <h4>O(nlog n) Runtime</h4>
+
+
+  <p class="text">
+    The O(nlog n) runtime describes a divide and conquer algorithm.
+    </p>
+  
+    <p class="text">
+      <b>Classic examples of O(nlog n) runtime</b>
+    
+      <li class="text">Merge Sort</li>
+      <li class="text">Heap Sort</li>
+    </p>
+
+
+  <p class="text">
+    Example of an algorithm that has O(nlogn) runtimne (Java). Also the image on the right shows how the Big O is O(nlogn).
+    Basically, divide is log n and merge is n which is why the Big O turns out to be O(nlogn).
+  </p>
+ 
+  <div class="flex-container">
+    <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85636970-ec383680-b64f-11ea-9b84-1286c434819d.jpeg" width="420" height="640"></div>
+    <div><img id="right"  src= "https://user-images.githubusercontent.com/42160652/85648050-e3565d80-b66d-11ea-89d7-597d51d012f6.jpeg" width="620" height="640"> </div>
+  </div>
+
+  <h4>O(2^n) Runtime</h4>
+
+
+  <p class="text">
+    The O(2^n) runtime describes an alogrithm whose output doubles as the input increases.
+    </p>
+  
+    <p class="text">
+      <b>Examples of O(2^n) runtime</b>
+    
+      <li class="text">Fibonacci sequence</li>
+      <li class="text">Towers of Hanoi Problem</li>
+    </p>
+
+    <p class = "text"> Example of an algorithm that has O(2^n) runtimne (Java). Basically, 
+      the output doubles each time. It doubles from 2 to 4 to 8. This is why the runtime is O(2^n).
+    </p> 
+    
+    <div class="flex-container">
+      <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85636482-b47cbf00-b64e-11ea-8251-99b2cf290c5e.jpeg" width="820" height="340"></div>
+      <div><img id="right" src= "https://user-images.githubusercontent.com/42160652/71681600-17099800-2d5b-11ea-895f-17e880646388.jpeg" width="620" height="340"> </div>
+    </div>
+
+    <h4>O(n!) Runtime</h4>
+
+
+    <p class="text">
+      The O(n!) runtime describes an alogrithm whose output doubles as the input increases.
+      </p>
+  
+      <p class = "text"> Example of an algorithm that has O(n!) runtimne (Java)
+      </p> 
+      
+      <div class="flex-container">
+        <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85638319-96658d80-b653-11ea-8a6e-e748dacd2a32.jpeg" width="920" height="340"></div>
+        <div><img id="right" src= "https://user-images.githubusercontent.com/42160652/85651477-21f01600-b676-11ea-8081-acb3ad063b0c.jpeg" width="420" height="340"> </div>
+      </div>
+
+      <p class="text">
+        On another note, I want to talk about that an O(n) algorithm is porportional to its input. Meaning lets say if an input array is a 2D
+        Array and it runs O(n^2) but since they are proportional to each other, the Big O is O(n). We had an input of O(n) and it runs O(n^2)
+        the Big O is O(n^2) as the input is porportional to it squared. This is the same for other Big O like O(log n) where the input is porportional
+        to its logarithm of that input.
+       </p>
+        
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85805205-ab0c5900-b719-11ea-815c-a8ca5c8cbc9d.jpeg
+       " width="600" height="640">
+       
+    <h2>More Information About Big O</h2>
+
+    <p class="text">
+      1. Sometimes there can be more than one input that affects the runtime so the runtime can be like O(a + log b). In this case, a is the length of one array while b is the length of the other array. 
+      Both for loops do not affect each other so the runtime is O(a+b). Another example is finding the sum of a 2D array where one input is the number of rows and the other input is the length of 
+      each row (assuming that a and b does not have the same value). In this case, the Big O is O(ab).
+    </p>
+
+    <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85638744-b8134480-b654-11ea-8716-b94a305bbab9.jpeg
+" width="820" height="340">
+
+<p class="text">
+  2. The Big O runtime O(n^2) can also have different exponents, such as O(n^3) which is slower than O(n^2) runtime. The higher the exponent the slower the runtime. An example is a triple nested for loop.
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85638762-c5303380-b654-11ea-8d04-e6fae8ed9088.jpeg
+" width="820" height="340">
+</body>
+
+<p class="text">
+  3. The Big O runtime O(2^n) can also have a different base, such as 3^n which is slower than 2^n. The higher the base the slower the runtime.
+</p>
+
+</p>
+<h2 id="a2"> Space Complexity</h2>
+
+
+    <!--  Takes us back to the top -->
+    <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+   </p>
+
+   <p class="text"> Space complexity is the measure of how much memory a program is required for execution.
+  </p>
+
+  <p class="text">Typical memory used by primitive types</p>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Bytes</th>
+  </tr>
+  <tr>
+    <td>Booelan</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Byte</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Char</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Int</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Float</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Long </td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Double </td>
+    <td>8</td>
+  </tr>
+</table>
+
+
+<p class="text"><b>Examples of Space Complexity (Assume that we are using the chart above)</b></p>
+
+<p class="text"><b>Example 1: int x= 7;</b></p>
+
+<p class="text">The space complexity is O(1) since an int is 4 bytes so it will be O(4) which is O(1).</p>
+
+<p class="text"><b>Example 2: char a= 'x';</b></p>
+
+<p class="text">The space complexity is O(1) since a char is 2 bytes so it will be O(2) which is O(1).</p>
+
+<p class="text"><b>Example 3: An Array of Integers</b></p> 
+
+<p class="text">The space complexity is O(n) becuase we are talking about an integer array that holds many integers. 
+Each integer is 4 bytes so the space complexity of an array is O(4n) which is O(n). </p>
+
+<p class="text"><b>Example 4: Linked Lists </b></p>
+
+<p class="text">The space complexity is O(n) becuase we are talking about a list that holds many nodes. 
+n represents a node which means it is O(n).</p>
+
+<p class="text">
+  The space complexity is O(n) becuase we are talking about an integer array that holds many integers 
+  and two integer variables. Each variable space complexity is O(4). The array space complexity is O(4n) 
+  since it is holding a number of integer values. With the space complexity of the method as O(4n + 4 + 4) 
+  the 4s get dropped and the constant, 4, also gets dropped which makes the Big O, O(n).
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85642964-dc751e00-b660-11ea-965d-2187538ccd41.jpeg
+" width="820" height="640">
+<br>
+<br>
+<br>
+   <!--  Takes us back to the top -->
+   <p class="darker">
+    <a href="#home" class = "darker">Back to top</a>
+    <br>
+ </p>
+
+
+
+</body>
+<!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

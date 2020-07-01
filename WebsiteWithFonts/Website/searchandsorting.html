@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+
+    <title> Searching and Sorting Methods </title>
+
+  
+  </head>
+  <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="frontpage.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bigO.html">Big O </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Searching and Sorting Methods <span class="sr-only">(current)</span>  </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="arrays.html">  Arrays  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="LinkedList.html">  Linked Lists  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="StacksAndQueues.html">Stacks and Queues</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trees.html">Trees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hashtable.html">Hash Tables </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="graphs.html">Graphs  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="other.html"> Other Topics </a>
+            </li>
+          </ul> 
+        </div>
+      </nav>
+      
+    </div>
+    </nav>
+
+    
+<body style="background-color: rgb(223, 217, 217);">
+
+    <h1 id= "home">Searching and Sorting Methods</h1>
+
+    <!--  Helps the user goes to the specific section they want to go -->
+     <p class="darker">
+       <a href="#a1"> Searching Methods </a>
+       <br>
+       <a href="#a2"> Sorting Methods</a>
+       <br>
+    </p>
+
+    <h2 id="a1"> Searching Methods</h2>
+
+
+    <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+    </p>
+
+
+    <p class="text"> Searching methods are used to find an element. While all searching methods are used to find the element, some are better in 
+      terms of runtime (big o) for certain conditions such as, if an array is sorted.
+    </p>
+
+    <h3>Linear Search</h3>
+
+    <p class="text"> Big O Runtime: Best Case: O(1)   Worst Case: O(n)</p>
+
+    <p class="text"> In linear search, we go through each element until we found the target or we went through every element.
+      When the target is found we return the index or -1 if it is not found.
+    </p>
+
+    <p class = "text"> On the left is the image of the walk through of linear search and on the right is the linear search code.
+   </p> 
+ 
+   <div class="flex-container">
+    <div><img src="https://user-images.githubusercontent.com/42160652/85805783-4d790c00-b71b-11ea-96ac-10281742df6a.png" width="420" height="440"></div>
+    <div><img src= "https://user-images.githubusercontent.com/42160652/85657702-5a94ed00-b680-11ea-930b-dc40fd81730b.jpeg" width="420" height="440"> </div>
+  </div>
+
+  <p class = "text"> The reason why the Big O is O(n) because we go through each element and the worst case
+   is O(n) since we go through all of the elements in the worst case and n represents all of the elements.
+   The reason why the Big O is O(1) because in the best case if the element is the target then we can return it.
+   It will always be constant because no matter what the size of the array is it will always return the first element.
+  </p> 
+
+  <h3>Binary Search</h3>
+
+  <p class="text"> Big O Runtime: Best Case: O(1)   Worst Case: O(log n)</p>
+
+  <p class="text"> In binary search, the array must be sorted or otherwise the search algorithm will not work. 
+    In the explanation of binary search I will be talking about soon, the array is sorted in asecnding order from left to right. 
+  </p>
+
+  <p class="text"> First we start with the middle value of the array. We can do this by getting the left index (0) and the right index (last index) and divide
+    it by two using integer division. If the element is the tagret we can return the index of the target. If the element we found is less than the target than we will move the left index to the index after the middle index. 
+    If the element we found is greater than the target than we will move the right index to the index before the middle index. We keep on doing this till
+    the right supasses the left. If the target is not found then we will return -1.
+  </p>
+
+  <p class = "text"> On the left is the image of the walk through of binary search and on the right is the binary search code.
+ </p> 
+
+ <div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/85805787-51a52980-b71b-11ea-9b12-6dcd4633810b.jpeg" width="420" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/85664419-39d09580-b688-11ea-8a05-266daf066158.jpeg" width="420" height="440"> </div>
+</div>
+ 
+<p class = "text"> The reason why the Big O is O(log n) because we touch through log(n) nodes. Looking at the example above we touch three
+  values and the size was 8 (8 will be our n since it is the size of the array). So log(8) is 3. In the best case, if at the try, the middle
+  is our target, we then return its index.
+ </p> 
+
+
+ <p class="darker">
+  <a href="#home" class = "darker">Back to top</a>
+  <br>
+</p>
+
+
+ <h2 id="a2"> Sorting Methods</h2>
+
+
+
+ <p class="darker">
+  <a href="#home" class = "darker">Back to top</a>
+  <br>
+</p>
+
+
+ <p class="text"> Sorting methods are used to sort an array. While all searching methods are used to sort the array. Some are better in 
+  terms of runtime (big o) for certain conditions such as, if an array is mostly sorted or not sorted at all.
+</p>
+
+<h3>Insertion Sort</h3>
+
+
+<p class="text"> Big O Runtime: Best Case: O(n)   Worst Case: O(n^2)</p>
+
+<p class="text"> In Insertion Sort, we take an element insert it where it should be. For instance, we have an array where we want to sort 3,1,2.
+  We can take 3 and insert it. Then take 1 and insert it before 3. And then take 2 and insert it between 1 and 3.
+</p>
+
+<p class = "text"> On the left is the image of the walk through of insertion sort and on the right is the insertion sort code.
+</p> 
+
+<div class="flex-container">
+<div><img src="https://user-images.githubusercontent.com/42160652/85904362-84f8be80-b7d6-11ea-9207-f4d51c35ed56.jpeg" width="420" height="440"></div>
+<div><img src= "https://user-images.githubusercontent.com/42160652/85822829-d6a73780-b749-11ea-8029-b6ced5613f18.jpeg" width="420" height="440"> </div>
+</div>
+
+<p class = "text"> The reason why the Worst Case Big O is O(n^2) because we traverse through the sorted array n times. Bassically, the worst
+  case is if the input is sorted in descending order. Because we have to go through the the whole sorted array n times. The best case would be
+  O(n) since we wouldn't have to traverse the sorted array, so we just need to traverse the array which is O(n). Basically, the best case would be if 
+  the array is already sorted. The more the array is sorted the better the Big O is.
+
+</p> <h3>Selection Sort</h3>
+
+
+<p class="text"> Big O Runtime: Best Case: O(n^2)   Worst Case: O(n^2)</p>
+
+<p class="text"> In Selection Sort, we take the smallest element and move it to the front. Then we take the smallest element of the current line 
+  of numbers and move that to the front. We keep on doing thid n-2 more times.
+</p>
+
+<p class = "text"> On the left is the image of the walk through of selection sort and on the right is the selection sort code.
+</p> 
+
+<div class="flex-container">
+<div><img src="https://user-images.githubusercontent.com/42160652/85904394-9a6de880-b7d6-11ea-84e0-4a90dab09320.jpeg" width="420" height="440"></div>
+<div><img src= "https://user-images.githubusercontent.com/42160652/85822825-d444dd80-b749-11ea-9ad0-8def50de0d5a.jpeg" width="420" height="440"> </div>
+</div>
+
+<p class = "text"> The reason why the Worst Case Big O is O(n^2) because we are going through all of the elements of the array to find the smallest 
+  element n times. Even the best case is O(n^2) because we are still searching for the smallest element n times (even if the array is sorted). Bascially,
+  slection sort is a pretty bad sorting algorithm and should only really be used if you know that the array is not sorted at all.
+</p> 
+
+<h3>Merge Sort</hs3>
+
+
+  <p class="text"> Big O Runtime: Best Case: O(nlogn)   Worst Case: O(nlogn)</p>
+
+  <p class="text"> In Megre Sort, we take an array and divide it in half and keep on dividing the halves into halves. We keep on doing this till we reach
+    a half witha size of ones. Then merge the ones back together that were original grouped. We will merge them to make sure they are in asceding order
+    by the two pointer method.
+  </p>
+  
+  <p class="text"> On the left is the image of the walk through of merge sort and on the right is the mergesort code.
+  </p> 
+  
+  <div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/85825233-b4b0b380-b74f-11ea-9fb5-3fdc993fb573.jpeg" width="420" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/85825399-1ec95880-b750-11ea-9878-92a2206c91f7.jpeg" width="420" height="440"> </div>
+  </div>
+  
+  <p class = "text"> The reason why the Worst Case Big O is O(n logn) we divide log n times and when merging we a total of n comparisons. When combined Big O
+  is O(nlogn). The Big O for Best Case is still the same is O(n logn) since we are bascially doing the same thing. Mergesort seems like the best Big O 
+  because for an array where we do not know how the elements are sorted we can say hey, the maybe the Big O is not as great as O(n) but at least that is way
+  better than ending up witha a Big O of O(n^2). Although, mergesort uses to much memory which is why we will explore other sorting algorithms.
+  </p> 
+
+<h3>Heapsort</h3>
+
+
+<p class="text"> Big O Runtime: Best Case: O(nlogn)   Worst Case: O(nlogn)</p>
+
+<p class="text"> In Heapsort, we first apply heapify(hyperlink) on the array. Then we can do the process where we take the max out an insert it to the 
+  array till the heap is empty.
+</p>
+
+<p class = "text"> As you can see, we first apply heapify to the array so we can turn it into a max heap. Then we delete the first element of heap 
+  and add it to the array till it gets empty.
+  </p> 
+
+  <div class="flex-container">
+    <div><img src="https://user-images.githubusercontent.com/42160652/85905247-e3bf3780-b7d8-11ea-8e94-9d200e7385ed.jpeg" width="420" height="440"></div>
+    <div><img src= "https://user-images.githubusercontent.com/42160652/85905265-f20d5380-b7d8-11ea-95d8-fad1c48dca55.jpeg" width="420" height="440"> </div>
+    <div><img src= "https://user-images.githubusercontent.com/42160652/85905266-f5084400-b7d8-11ea-9194-28aebb592e48.jpeg" width="420" height="440"> </div>
+    </div>
+    
+
+<p class = "text"> The image below is the code for heapsort. 
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85904816-af974700-b7d7-11ea-8636-59aa9baeb561.jpeg" width="420" height="440">
+
+<p class = "text"> The reason why the Worst Case Big O is O(nlogn) the Big O for heapify is O(n). The process of taking out an element and adding it to the array
+  is O(nlogn) as we are deleting from a max heap n times. So n + nlogn would be O(nlogn) as nlogn > n. The Best Case Big O is still the same because no matter what
+  the size or the elements in the array are it will always do heapify O(n) and delete from max n times (O(nlogn)).
+  </p> 
+
+  <h3>Quicksort</h3>
+
+
+<p class="text"> Big O Runtime: Best Case: O(nlogn)   Worst Case: O(n^2)</p>
+
+<p class="text"> In Quicksort, we set pivot (usually any element can be the pivot but we are just going use the first element as the pivot).The we
+  set our left pointer (element after the pivot) and right pointer (last element of the array). Then we move the left element till it surpasses right or
+  the element is greater than or euqal to the pivot. We move the right pointer till the element is less than the pivot or the left pointer meets the right
+  pointer. After that we swap the elements. If left surpasses right we swap the element before left with the pivot and then we divide arrays between pivot
+  to sub arrays. We apply it on it again and we keep on doing this till the subarrays are elements of length 1.
+</p>
+
+<p class = "text"> As you can see, we set our first element as the pivot. The left pointer is set after the pivot just like it is supposed to. The right
+  pointer is set at the end of the array like it is supposed to. We keep on increasing L by 1 till the element L is pointer is greater than the pivot.
+  </p>
+
+  <img class = "image" src="https://user-images.githubusercontent.com/42160652/85908107-c04cba80-b7e1-11ea-94ef-3a44d086ada3.jpeg" width="420" height="440">
+
+  <p class = "text"> Now we keep on decreasing R till at 3 since R is now less than the pivot. We will now swap 27 with 3.
+    </p>
+  
+  <img class = "image" src="https://user-images.githubusercontent.com/42160652/85908111-c3e04180-b7e1-11ea-91a0-066c26b28da9.jpeg" width="420" height="440">
+
+  <p class = "text"> After that we increase L by 1 and decrease R by 1. But now look: R > L. So that means we will swap the index of L minus 1 with the pivot.
+    So 3 gets swapped with 6. Now we apply quicksort on the array on the left of 6 and the array on the right of 6. In the case we get an array of size two left
+    and right are just on top of each other. We keep on doing till the array goes to a size of 1.
+  </p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85908121-ccd11300-b7e1-11ea-8f3d-2eda09c3a645.jpeg" width="420" height="440">
+
+<p class = "text"> Now try to do quicksort on this array.
+</p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85930780-1dea1100-b88d-11ea-989a-5d76398b4618.jpeg" width="420" height="440">
+
+<p class = "text"> Answer is here
+</p>
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85930781-1e82a780-b88d-11ea-89c7-2d4ffbc183ee.jpeg" width="420" height="440">
+
+<p class = "text"> The image below is the code for quicksort. 
+</p> 
+
+<img class = "image" src="https://user-images.githubusercontent.com/42160652/85907004-161f6380-b7de-11ea-8c05-56eef88e26f7.jpeg" width="420" height="440">
+
+
+<p class = "text"> The reason why the Worst Case Big O is O(n^2) because the worst case is if the array is sorted. As you can see,
+  if will 3 comparisons, 2, 1. We can calculate it using summation of numbers (you can look up more about it online). Basically, summation
+   of numbers Big O is O(n^2). The Best Case Big O is O(nlogn). Basically the left and right subarrays has around the same length as shown on the right.
+   It looks similar to another sort that we know 😉. 
+  </p> 
+
+  <div class="flex-container">
+    <div><img src="https://user-images.githubusercontent.com/42160652/85912912-4840bd80-b7fe-11ea-883c-41f1a91dea6c.jpeg" width="420" height="440"></div>
+    <div><img src= "https://user-images.githubusercontent.com/42160652/85912913-48d95400-b7fe-11ea-992d-4e0d66be4a58.jpeg" width="420" height="440"> </div>
+    </div>
+
+<h4>Fine Tunning Quicksort</h4>
+
+<p class="text"> In Quicksort, we can finetune to reduce the runtime or at least the number of comparisons. While, the best way to see the best way to fine tune
+  it is through recursion, we can some of the methods.
+</p>
+
+<p class="text"> In finetuning method 1, we can obtain the first value, second value, and middle value. We take the middle value and switch with the pivot.
+  Then perform quick sort. In finetuning method 2, we can do quicksort and then apply insertion sort as it might have less comparions. We can really determine
+  the best size of an array for insertion sort through experimentation. The last finetuning method, is efficient in terms of space. When we do quicksort, since 
+  we know that it is a recursive algorithm it builds a stack of O(n). Now we want to try to reduce the space. Perhaps we can first call the method on the smaller
+  subarray. Since the array is smaller, we can call the method on that first and since it will most likey call little to none methods it will most likely be done
+  quickly and be popped out of the stack. Bascially, it will me a stack of O(1). Now when we work on the larger sub array, in the worst case, the smaller side will
+  be n/2, so the other side is n/2-1, so the next subarray will be n/4, n/8, and so on. This makes the stack a Big O space complexity of O(log n).
+</p>
+
+<div class="flex-container">
+  <div><img src="https://user-images.githubusercontent.com/42160652/85912912-4840bd80-b7fe-11ea-883c-41f1a91dea6c.jpeg" width="420" height="440"></div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/85912913-48d95400-b7fe-11ea-992d-4e0d66be4a58.jpeg" width="420" height="440"> </div>
+  <div><img src= "https://user-images.githubusercontent.com/42160652/85912914-4971ea80-b7fe-11ea-8610-79deffcad2a6.jpeg" width="420" height="440"> </div>
+  </div>
+
+<br>
+<p class="darker">
+  <a href="#home" class = "darker">Back to top</a>
+  <br>
+</p>
+
+
+
+
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

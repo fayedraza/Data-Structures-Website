@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+
+    <title> Hash Tables </title>
+
+  
+  </head>
+  <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="frontpage.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="bigO.html">Big O </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="searchandsorting.html">Searching and Sorting Methods</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="arrays.html">  Arrays  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="LinkedList.html">  Linked Lists  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="StacksAndQueues.html">Stacks and Queues</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trees.html">Trees</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Hash Tables <span class="sr-only">(current)</span></a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="graphs.html">Graphs  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="other.html"> Other Topics </a>
+            </li>
+          </ul> 
+        </div>
+      </nav>
+      
+    </div>
+    </nav>
+
+    
+<body style="background-color: rgb(223, 217, 217);">
+
+    <h1 id= "home">Hash Tables</h1>
+
+
+    <p class="text">If you already know about hash tables and want to go into the Big O of Hash Tables then click on Big O, located below. </p>
+    
+    <p class="darker">
+       <a href="#a1">Big O</a>
+       <br>
+    </p>
+
+    <h3>What is a Hash Table?</h3>
+
+    <p class="text">Hash Tables is a data structures that will map the key to the value. Also, a hash function will be used to find the index.
+        The diagaram below shows how does an insertion in a hashtable work. Basically, the key gets computed into hashcode to find the suitable index.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85495681-01a65580-b5a9-11ea-8084-44953f514501.jpeg
+    " width="600" height="640">
+
+    <p class="text">The image below shows how a string turns into a hashcode for mapping. Basically we get the number by a is 1, b is 2, c is 3, and so on.
+        And the we use the mod function to get our index for insertion. 10 is the size of the hashtable which I will show soon.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85495832-4a5e0e80-b5a9-11ea-81b2-2e46be38bc99.jpeg
+    " width="600" height="640">
+
+    <p class="text"> The hash table is shown below. We will start the index from zero like we do in arrays. In addition, we already have 
+        inserted cat into the hashtable. Basically, 4 is the index of the hash table and that is where will we store cat.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85496211-f1db4100-b5a9-11ea-9848-f5c85b8dd7f8.jpeg
+    " width="600" height="640">
+
+    <p class="text"> Now we have compute the hashcode for dog and mod it by 10 (size of hash table) which is 6. dog will be mapped
+        to the array index of 6.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85496458-51395100-b5aa-11ea-8bd4-26b312727e7f.jpeg
+    " width="600" height="640">
+
+    <p class="text"> Now we have compute the hashcode for mouse and mod it by 10 (size of hash table) which is 3. dog will be mapped
+        to the array index of 3.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85496828-f2280c00-b5aa-11ea-9a72-422bb7cb4716.jpeg
+    " width="600" height="640">
+
+    <p class="text"> Now we have compute the hashcode for ear and mod it by 10 (size of hash table) which is 4. dog will be mapped
+        to the array index of 4. The issue is there is an element already inserted but we can just insert it before the elements.
+        So ear will come before but.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85496832-f3593900-b5aa-11ea-8b12-5bfc42babacb.jpeg
+    " width="600" height="640">
+
+    <h3>Computing the Load Factor</h3>
+
+
+    <p class="text"> In order to computer the load factor, we have to divide the number of elements by the size of hashtable. 
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85497575-294aed00-b5ac-11ea-9bf9-5edef09c521b.jpeg
+    " width="600" height="640">
+
+    <p class="text"> Every hash table has a treshold. The hash table current load facotr must be less than or equal to the load factor. So at 
+        the very bottom of the image the hash table's load factor surpasses the treshold. So think about what could be do to solve this problem.
+        We will talk about it at the next image.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85497770-821a8580-b5ac-11ea-9ded-38908bb2ffa6.jpeg
+    " width="600" height="640">
+
+
+    <p class="text"> First we have double the size of the hash table. So the original size of the hash table is 2 will be doubled to 4. 
+        And also we have to rehash all of the original values. Also, in the mod function, we have to change it to 4 instead of 2 since 4
+        is the new size now. This process is called rehashing.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85498065-ffde9100-b5ac-11ea-973a-5d3c63782085.jpeg
+    " width="600" height="640">
+
+    <p class="text"> Now insert 14 into the hashtable and see if we need to rehash or not. Answer and/or explanation will be at the next
+        image.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85498315-7085ad80-b5ad-11ea-819b-17d1805a661b.jpeg
+    " width="600" height="640">
+
+     <p class = "text"> So after inserting 14, the load factor surpasses the treshold which means we need to rehash. We havae the double
+         the size of the original hashtable and rehash all of the original elements.
+       </p>
+
+       <div class="flex-container">
+         <div><img src="https://user-images.githubusercontent.com/42160652/85498425-a6c32d00-b5ad-11ea-9488-50d59c988cac.jpeg" width="600" height="440"></div>
+         <div><img src="https://user-images.githubusercontent.com/42160652/85498426-a7f45a00-b5ad-11ea-8878-8fa2357c8d6c.jpeg" width="600" height="440"></div>
+       </div>
+
+       <h3>Hash Tables in Java</h3>
+
+       <p class="text"> Basically Hash Map is used in Java as a hash table. Hash Set is like a list.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85506271-06c1cf80-b5be-11ea-912d-bdef710ba77b.jpeg
+    " width="600" height="640">
+
+    <p class="text">  Here are the Hash Table methods you can use in Java. The one I circled is a method you could use in a hash map.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85506275-07f2fc80-b5be-11ea-84bd-1dcc7fee33c8.jpeg
+    " width="600" height="640">
+
+    <p class="text"> Here are the Hash Set methods you can use in Java.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85505873-4805af80-b5bd-11ea-8846-ad654e420fb1.jpeg
+    " width="600" height="640">
+
+       <h3>Applications of Hash Tables: Duplicate Element</h3>
+
+
+       <p class="text"> Suppose we have a program where we want to find the element in a an array that has a dupplicate in another array.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85501028-906ba000-b5b2-11ea-8ebb-c0ad3914c249.jpeg
+    " width="600" height="640">
+
+    <p class="text">We first check if the element is in the hash set. If it does then we can return that element otherwise we add it and move on to 
+        the next element.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85501411-55b63780-b5b3-11ea-9559-fb68fc74c5a1.jpeg"
+    width="600" height="640">
+
+    <p class="text"> At 2 we already have seen tnat 2 is in the hash set which means 2 is a duplicate. This means that 2 is our duplicate and
+        we can end this program. Now try to implement it in Java. Java implementation will be on the next image.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85501649-cb220800-b5b3-11ea-9e3a-7caa5e50e5c8.jpeg"
+    width="600" height="640">
+
+    <p class="text"> Here is the Java implementation.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85507226-088c9280-b5c0-11ea-9b5c-771a33da0f3f.jpeg"
+    width="600" height="640">
+
+    <h3>Applications of Hash Tables: Unique Emails</h3>
+
+    <p class="text">Every email consists of a local name and a domain name, separated by the @ sign.
+        <br>
+        For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name.
+        <br>
+        Besides lowercase letters, these emails may contain '.'s or '+'s.
+        <br>
+        If you add periods ('.') between some characters in the local name part of an email address, mail sent there will be forwarded to the same address without dots in the local name.  For example, "alice.z@leetcode.com" and "alicez@leetcode.com" forward to the same email address.  (Note that this rule does not apply for domain names.)
+        <br>
+        If you add a plus ('+') in the local name, everything after the first plus sign will be ignored. This allows certain emails to be filtered, for example m.y+name@email.com will be forwarded to my@email.com.  (Again, this rule does not apply for domain names.)
+        <br>
+        It is possible to use both of these rules at the same time.
+        <br>
+        Given a list of emails, we send one email to each address in the list.  How many different addresses actually receive mails? 
+        <br>
+        <br>
+        <br>
+        Example 1:
+        <br>
+        Input: ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+        <br>
+        Output: 2
+        <br>
+        Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive emails
+    </p>
+
+    <p class="text"> Lets start with the example below.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85502577-8f883d80-b5b5-11ea-9deb-5fd88bd3c871.jpeg"
+    width="600" height="640">
+
+    <p class="text"> We will first go through the local name and ignore . . And then we will get the domain name. We check that both of them do not exist
+        in the hash set so we add both of them and then increase the count by 1.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85502768-04f40e00-b5b6-11ea-83b8-6e9548383556.jpeg"
+    width="600" height="640">
+
+    <p class="text"> After extracting the local name and domain name we realize the hash set already contains it so we will not increase the count.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85503001-9e232480-b5b6-11ea-8447-8de3e4150725.jpeg"
+    width="600" height="640">
+
+    <p class="text"> After extracting the local name and domain name we realize the hash set does not contain both: the domain name and local name
+        so we will increase the count by 1 and add them in.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85503484-c6f7e980-b5b7-11ea-9b27-6d44cd58f76e.jpeg"
+    width="600" height="640">
+
+    <p class="text"> After extracting the local name and domain name we realize the hash set has the local bame but the domain name is not 
+        collected. So we will add the domain name and increase the count by 1. We would have done the same if the local name is included but the 
+        domain name is not included. Now try to implement it in Java. Java implementation is located on the next image.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85503585-045c7700-b5b8-11ea-9b45-d1e1b2d45706.jpeg"
+    width="600" height="640">
+
+    <p class="text"> Here is the Java Implementation
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85506625-beef7800-b5be-11ea-9221-12e2ec3959c7.jpeg
+    "width="600" height="640">
+
+    <h3>Hash Table Problems</h3>
+
+   
+    <p class="text"> For this problem, we have implement the insert and rehash method for hash tables. Class is given on the left
+        and problem is given on the right.
+    </p>
+
+    <div class="flex-container">
+        <div><img src="https://user-images.githubusercontent.com/42160652/85504054-2e626900-b5b9-11ea-9232-eb9d2caa677a.jpeg" width="600" height="440"></div>
+        <div><img src="https://user-images.githubusercontent.com/42160652/85505241-e0029980-b5bb-11ea-88b4-9ac7e6b1a41d.jpeg" width="600" height="440"></div>
+      </div>
+
+      <p class="text"> At the insert method we will add the value into the index and increase the number of elements by 1. We also have to check, if the load 
+          factor surpasses the treshold and if it does then we will call the rehash method. For the rehash method, we can save the original array and then
+          we will double the size of the array and call the insert method on the new hashtable for each element in the original hashtable.
+    </p>
+
+    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85504231-93b65a00-b5b9-11ea-8a1a-dacba5341650.jpeg"
+    width="600" height="640">
+
+   
+
+
+       <h2 id="a1"> Big O of Hash Tables</h2>
+
+
+       <p class="darker">
+        <a href="#home" class = "darker">Back to top</a>
+        <br>
+     </p>
+
+
+       <p class="text"> The reason why the Big O of insert into a hashtable is O(1) because after finding the index to insert we just insert it 
+           before the original linked list since we do not worry about making it sorted in this case. If it was sorted then it would be O(n) since
+           we have to search through numbers to find the right place to insert. This is also why the Big O is O(n) for search and delete since we search 
+           through elements to locate or delete. 
+       </p>
+
+       <img class = "image" src="https://user-images.githubusercontent.com/42160652/85498750-4b456f00-b5ae-11ea-8c57-a0ee61a7a30f.jpeg
+       " width="600" height="640">
+
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

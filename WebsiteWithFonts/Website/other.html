@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+
+    <title> Other Topics </title>
+
+  
+  </head>
+  <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="frontpage.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bigO.html">Big O </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="searchandsorting.html">Searching and Sorting Methods</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="arrays.html">  Arrays  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="LinkedList.html">  Linked Lists  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="StacksAndQueues.html">Stacks and Queues</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trees.html">Trees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hashtable.html">Hash Tables </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="graphs.html">Graphs  </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Other Topics <span class="sr-only">(current)</span> </a>
+            </li>
+          </ul> 
+        </div>
+      </nav>
+      
+    </div>
+    </nav>
+
+    
+<body style="background-color: rgb(223, 217, 217);">
+
+    <h1 id="home"> Other Topics </h1>
+
+  <p class="text"> Here are some good topics to go over. These topics are very good to know for computer scientists. </P>
+</body>
+
+<!--  Helps the user goes to the specific section they want to go -->
+ <p class="darker">
+   <a href="#a1">1. Towers of Hanoi </a>
+   <br>
+   <a href="#a2">2. General Trees</a>
+   <br>
+</p>
+
+<h2 id="a1">Towers of Hanoi</h2>
+
+
+<p class="darker">
+  <a href="#home" class = "darker">Back to top</a>
+  <br>
+</p>
+
+
+<p class="text">Suppose we have siutation where we want to move a stack of discs from one pole to another. The stacks are from the biggest stack to the smallest stack.
+    You can look on the image below and see that we want to move from pole A to pole C. And pole B will be like our helper pole. Here are two roles: 
+    1. We can more one disk at a time and 2. a bigger disk can not go on top of a smaller stack.
+</p>
+
+<p class="text">
+    Suppose we want to move these three stacks from the current pole to the last pole. It might seem complicated but lets start with 1 disc at the next image.
+  </p>
+ 
+  <img class = "image" src="https://user-images.githubusercontent.com/42160652/85927609-3f3f0300-b875-11ea-8950-e2a3085edd06.jpeg
+" width="600" height="640">
+
+<p class="text">
+    As you can see it is pretty easy to move 1 disk to the last pole.
+  </p>
+ 
+  <div class="flex-container">
+    <div><img src="https://user-images.githubusercontent.com/42160652/85927696-c3918600-b875-11ea-90cc-22161f5627aa.jpeg" width="420" height="440"></div>
+    <div><img src= "https://user-images.githubusercontent.com/42160652/85927697-c3918600-b875-11ea-9e06-d25af1b53ede.jpeg" width="420" height="440"> </div>
+  </div>
+
+  <p class="text">
+    With two disks the challenge increases but not a lot. First, we move the small one to the helper pole (middle pole). Then I move the other disc to the 
+    last pole. After that, I move the disc from the middle to the last pole
+  </p>
+ 
+  <div class="flex-container">
+    <div><img src="https://user-images.githubusercontent.com/42160652/85927981-ae1d5b80-b877-11ea-8654-810aa9377051.jpeg" width="420" height="440"></div>
+    <div><img src= "https://user-images.githubusercontent.com/42160652/85927982-ae1d5b80-b877-11ea-9de2-2bd16ba99636.jpeg" width="420" height="440"> </div>
+  </div>
+  <div class="flex-container">
+    <div><img src="https://user-images.githubusercontent.com/42160652/85927983-ae1d5b80-b877-11ea-8005-30ba7ab42ff4.jpeg" width="420" height="440"></div>
+    <div><img src= "https://user-images.githubusercontent.com/42160652/85927984-ae1d5b80-b877-11ea-9d7d-30fb94306164.jpeg" width="420" height="440"> </div>
+  </div>
+
+  <p class="text">
+  Now here is how we do it with three disks notice how the algorithm is kinda similar to doing with two stacks and 1 stack. 
+  </p>
+ 
+  <img src="https://user-images.githubusercontent.com/42160652/85928287-ecb41580-b879-11ea-981f-c5aa582632a4.png" width="420" height="440">
+
+  <p class="text">
+    The left image shows Towers of Hanoi with 4 discs and then Towers of Hanoi with 5 discs.
+  </p>
+ 
+  <div class="flex-container">
+    <div><img src="https://user-images.githubusercontent.com/42160652/85928511-6993bf00-b87b-11ea-8f2e-84d203b65264.gif" width="420" height="440"></div>
+    <div><img src= "https://user-images.githubusercontent.com/42160652/85928518-73b5bd80-b87b-11ea-9990-7bb8eb53c595.png" width="420" height="440"> </div>
+  </div>
+
+  <p class="text">
+    Here is the Java implementation of this method. The Java implementation shows why recursion is so important. Doing it iteratively, would be a nightmare.
+    </p>
+   
+    <img src="https://user-images.githubusercontent.com/42160652/85928648-94cade00-b87c-11ea-9885-303a126f0b64.jpeg" width="420" height="440">
+  <br>
+
+
+  <p class="darker">
+    <a href="#home" class = "darker">Back to top</a>
+    <br>
+  </p>
+
+  <h2 id="a2">General Trees </h2>
+
+
+  <p class="darker">
+    <a href="#home" class = "darker">Back to top</a>
+    <br>
+  </p>
+
+
+<p class="text">
+  General Tree is a type of tree where it has as many children as possible. It can be used to model hierarchies. Like the the top might be a king or queen, bottom
+  might be a prince or princess and so on.
+</p>
+ 
+  <img class = "image" src="https://user-images.githubusercontent.com/42160652/85930621-fe061d80-b88b-11ea-9f90-4710f80e0b4b.jpeg
+" width="600" height="640">
+
+    <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+    </p>
+
+<!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

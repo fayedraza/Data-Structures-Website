@@ -14,6 +14,7 @@
     <title> Linked Lists </title>
 
   
+     <!-- All of the sections -->
   </head>
   <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
 
@@ -31,7 +32,7 @@
                 <a class="nav-link" href="bigO.html">Big O </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="searchingandsorting.html">Searching and Sorting Methods   </a>
+                <a class="nav-link" href="searchandsorting.html"> Searching and Sorting Methods   </a>
               </li>
             <li class="nav-item">
               <a class="nav-link" href="arrays.html">  Arrays </a>
@@ -68,6 +69,7 @@
     
     <p class="text">If you already know about linked lists and want to go into the specific sections then click one of the sections below. </p>
     
+     <!-- Linked List Sub Sections -->
     <p class="darker">
        <a href="#a1">1. Singly Linked Lists</a>
        <br>
@@ -78,8 +80,9 @@
        <a href="#a4">4. Big O of Linked Lists</a>
     </p>
         
+     <!-- Definition of a Linked List -->
       <p class = "text"> 
-           Definition: Linked Lists is a data structure where every node contains a value and a pointer to the next node. <br>
+           Definition: Linked Lists is a data structure where every node contains a value and a pointer to the next node. 
            A node consists of a value and a pointer which points to another value or null.
         </p>
     
@@ -90,48 +93,51 @@
           <br>
        </p>
     
-    
+
+     <!-- Coding a Linked List -->
         <h3>Basics of Linked Lists</h3><br>
     
        
         <p class = "text" > So now how do we code a linked list? </p>
         
         <p class = "text">As you can see below we have the Node class which has the fields: data which is the value and next which is the pointer.
-          <br>           So now what can we do with this class? </p>
+                    So now what can we do with this class? </p>
     
-        <img class = "image"  src= "https://user-images.githubusercontent.com/42160652/82628285-6fcab780-9bba-11ea-8082-b489cea9e5d2.jpeg" width="420" height="540">
+        <img class = "middle"  src= "https://user-images.githubusercontent.com/42160652/82628285-6fcab780-9bba-11ea-8082-b489cea9e5d2.jpeg" width="420" height="540">
     
-        <p class = "text">As of now we have made a front variable of type Node and it has been initialized to null. Now what if we set front to new Node(2,null).<br>
+        <p class = "text">As of now we have made a front variable of type Node and it has been initialized to null. Now what if we set front to new Node(2,null)?<br>
           The left side shows how we code it and right side shows what does it look like right now if we draw it.</p>
        
         <div class="flex-container">
-          <div><img src="https://user-images.githubusercontent.com/42160652/82630411-9855b000-9bc0-11ea-9de3-96c97e4b300b.jpeg" width="420" height="440"></div>
-          <div><img src= "https://user-images.githubusercontent.com/42160652/82629096-b3262580-9bbc-11ea-8cb5-2cf9f62e0879.jpeg" width="420" height="440"> </div>
+          <div   ><img id="left" src="https://user-images.githubusercontent.com/42160652/82630411-9855b000-9bc0-11ea-9de3-96c97e4b300b.jpeg" width="420" height="440"></div>
+          <div  ><img id = "right" src= "https://user-images.githubusercontent.com/42160652/82629096-b3262580-9bbc-11ea-8cb5-2cf9f62e0879.jpeg" width="420" height="440"> </div>
         </div>
     
         <p class = "text">So what if we want to add another element to our linked list. Lets just say that we wanted to add 10.<br> We can create another block and connect it
         towards the end of the original linked list as shown in the image below.</p>
         
-        <img class = "image" src="https://user-images.githubusercontent.com/42160652/82630896-11093c00-9bc2-11ea-927c-21909bf6034e.jpeg" width="420" height="440">
+        <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82630896-11093c00-9bc2-11ea-927c-21909bf6034e.jpeg" width="420" height="440">
     
         <p class = "text">But how can we do it in Java?<br>We create a node object and make front point to that object. We can code it in two ways. </p>
     
       <div class="flex-container">
-       <div><img src="https://user-images.githubusercontent.com/42160652/82632613-bd4d2180-9bc6-11ea-9a9e-cb78cf301b5f.jpeg" width="420" height="440"> </div>
-       <div><img src="https://user-images.githubusercontent.com/42160652/83218149-7073c880-a13b-11ea-8b4e-0b87e7a24d47.jpeg"  width="550" height="440"></div>
+       <div><img id="left" src="https://user-images.githubusercontent.com/42160652/82632613-bd4d2180-9bc6-11ea-9a9e-cb78cf301b5f.jpeg" width="420" height="440"> </div>
+       <div><img id="right" src="https://user-images.githubusercontent.com/42160652/83218149-7073c880-a13b-11ea-8b4e-0b87e7a24d47.jpeg"  width="550" height="440"></div>
      </div>
     
          <p class = "text">As you can see we have used the .next function. So what is it?<br>It goes to the next node. We can use multiple .next functions to go even further of the linked list.</p>
     
-         <img class = "image" src="https://user-images.githubusercontent.com/42160652/82637892-c1cc0700-9bd3-11ea-8751-cde09ec955a3.jpeg" width="420" height="440">
+         <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82637892-c1cc0700-9bd3-11ea-8751-cde09ec955a3.jpeg" width="420" height="440">
     
-          <p class = "text">What if we reach to null ?</p>
+          <p class = "text">What if we reach to null?</p>
           
-          <img class = "image" src="https://user-images.githubusercontent.com/42160652/82637892-c1cc0700-9bd3-11ea-8751-cde09ec955a3.jpeg" width="420" height="440">
+          <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82637892-c1cc0700-9bd3-11ea-8751-cde09ec955a3.jpeg" width="420" height="440">
           
           <p class = "text">Since null does not have a pointer (it is the dead end of the linked list), it will throw a null pointer exception.
              <br> WE REALLY DO NOT WANT TO RUN INTO A NULL POINTER EXCEPTION!</p>
-         
+
+            
+          <!--  Applications of Linked Lists -->
        <h3>Linked Lists in Action</h3>
     
     
@@ -141,8 +147,8 @@
         <p class="text">We can traverse through linked lists using for loops and while loops.</p>
     
         <div class="flex-container">
-          <div><img src="https://user-images.githubusercontent.com/42160652/82985372-ee13c900-9fc1-11ea-9667-be41b2ae710f.jpeg" width="950" height="440"> </div>
-          <div><img src="https://user-images.githubusercontent.com/42160652/83221173-1414a700-a143-11ea-8831-21f2cb7bc39b.jpeg"  width="420" height="440"></div>
+          <div><img id="left" src="https://user-images.githubusercontent.com/42160652/82985372-ee13c900-9fc1-11ea-9667-be41b2ae710f.jpeg" width="950" height="440"> </div>
+          <div><img id="right" src="https://user-images.githubusercontent.com/42160652/83221173-1414a700-a143-11ea-8831-21f2cb7bc39b.jpeg"  width="420" height="440"></div>
         </div>
         
         <h4>Adding a node to the front</h4>
@@ -150,16 +156,16 @@
     
        <p class = "text"> We want to do it in a way that 1 can come before 2 and 1 becomes the new front as shown in the image below, but how?</p>
     
-        <img class = "image" src="https://user-images.githubusercontent.com/42160652/82720252-9f8fc300-9c7f-11ea-926a-6c854ac6ded8.jpeg
+        <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82720252-9f8fc300-9c7f-11ea-926a-6c854ac6ded8.jpeg
         " width="600" height="440">
     
         <p class = "text">We can make a temporary node and set its next to the original node which is a. In this case, we can return new node 
-       <br>which is the temporary node as its next is the original linked list. The illustration and its implementation in Java can be shown below.
+       which is the temporary node as its next is the original linked list. The illustration and its implementation in Java can be shown below.
         </p>
      
         <div class="flex-container">
-          <div><img src="https://user-images.githubusercontent.com/42160652/82721008-0bc1f500-9c87-11ea-8f0c-c3c24f5d57ac.jpeg" width="420" height="440"> </div>
-          <div><img src="https://user-images.githubusercontent.com/42160652/82721015-3a3fd000-9c87-11ea-8dd2-61b08d30bbd4.jpeg"  width="420" height="440"></div>
+          <div><img id="left" src="https://user-images.githubusercontent.com/42160652/82721008-0bc1f500-9c87-11ea-8f0c-c3c24f5d57ac.jpeg" width="420" height="440"> </div>
+          <div><img id="right" src="https://user-images.githubusercontent.com/42160652/82721015-3a3fd000-9c87-11ea-8dd2-61b08d30bbd4.jpeg"  width="420" height="440"></div>
        </div>
     
         <h4>Deleting the front node</h4><br>
@@ -168,47 +174,47 @@
         <p class = "text">Suppose we want to delete the first node of a linked list. Perhaps we can just return the neighbor of the first node as shown in the code and image below. </p>
         
         <div class="flex-container">
-          <div><img src="https://user-images.githubusercontent.com/42160652/82722193-6f9deb00-9c92-11ea-8f8e-f1af5f6a85ae.jpeg" width="420" height="440"> </div>
-          <div><img src="https://user-images.githubusercontent.com/42160652/82722157-0322ec00-9c92-11ea-9336-b1df8351a02c.jpeg"  width="420" height="440"></div>
+          <div><img id="left" src="https://user-images.githubusercontent.com/42160652/82722193-6f9deb00-9c92-11ea-8f8e-f1af5f6a85ae.jpeg" width="420" height="440"> </div>
+          <div><img id="right" src="https://user-images.githubusercontent.com/42160652/82722157-0322ec00-9c92-11ea-9336-b1df8351a02c.jpeg"  width="420" height="440"></div>
         </div>
     
         <p class = "problem">Now lets attempt the problems below. Use the following class below for the problems. 
-           <br> Please take a look at the four general test cases located below. These are the general test cases you should test with when you are done solving a linked list problem.</p>
+            Please take a look at the four general test cases located below. These are the general test cases you should test with when you are done solving a linked list problem.</p>
     
         <div class="flex-container">
-          <div><img src="https://user-images.githubusercontent.com/42160652/82864931-a6267080-9ef3-11ea-93eb-b84dc81ebdff.jpeg" width="420" height="440"> </div>
-          <div><img src="https://user-images.githubusercontent.com/42160652/83104616-1b767a80-a087-11ea-8426-92fc1279ff2a.jpeg"  width="420" height="440"></div>
+          <div><img id="left" src="https://user-images.githubusercontent.com/42160652/82864931-a6267080-9ef3-11ea-93eb-b84dc81ebdff.jpeg" width="420" height="440"> </div>
+          <div><img id="right" src="https://user-images.githubusercontent.com/42160652/83104616-1b767a80-a087-11ea-8426-92fc1279ff2a.jpeg"  width="420" height="440"></div>
         </div>
     
        <p class = "problem">For this problem, you have to delete all of the occurences of a target in a linked list.</p>
       
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82780226-883e0a80-9e24-11ea-943e-92b01e26734a.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82780226-883e0a80-9e24-11ea-943e-92b01e26734a.jpeg
           " width="600" height="640">
     
        <p class = "solutions">Answer with explanation is at the bottom.</p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82780229-88d6a100-9e24-11ea-9b06-51edf89ed6bf.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82780229-88d6a100-9e24-11ea-9b06-51edf89ed6bf.jpeg
        " width="600" height="640">
     
        <p class = "problem">For the last problem of this section, you have to merge two sorted linked lists using recursion.</p>
       
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82864972-bcccc780-9ef3-11ea-8a17-da7ebbba9212.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82864972-bcccc780-9ef3-11ea-8a17-da7ebbba9212.jpeg
           " width="600" height="640">
     
        <p class = "solutions">Answer with explanation is at the bottom.</p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82864975-bdfdf480-9ef3-11ea-8b0b-cca40ec4aee7.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82864975-bdfdf480-9ef3-11ea-8b0b-cca40ec4aee7.jpeg
        " width="600" height="900">
 
        <p class = "problem">For this problem, you have to switch the pairs around of a linked list. Assume the length of the liked list will not be even.</p>
       
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/85937715-3e898980-b8d4-11ea-90ed-b0d67de9a31e.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85937715-3e898980-b8d4-11ea-90ed-b0d67de9a31e.jpeg
           " width="600" height="640">
     
        <p class = "solutions">Answer with explanation is at the bottom.</p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/85937717-40534d00-b8d4-11ea-82d8-157768ef465d.jpeg
-       " width="600" height="900">
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85937717-40534d00-b8d4-11ea-82d8-157768ef465d.jpeg
+       " width="800" height="600">
        
        <h2 id="a2">Circular Linked Lists</h2>
     
@@ -219,11 +225,13 @@
     
     
        <p class = "text">Circular linked list is a type of linked list where the nodes never reach to null meaning the last element points to the first element.
-          <br> Here is an example of a circular linked list below:
+           Here is an example of a circular linked list below:
        </p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82973584-d29ac500-9fa5-11ea-9fb6-2f3b80f608bb.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82973584-d29ac500-9fa5-11ea-9fb6-2f3b80f608bb.jpeg
        " width="600" height="640">
+
+        <!-- Coding a Circular LinkedList -->
     
        <h3>Coding the first node of a circular linked list</h3><br>
     
@@ -231,56 +239,57 @@
        <p class="text">Since this is a ciruclar linked list, we can declare next to the node itself. This makes it a circular linked list.</p>
     
        <div class="flex-container">
-          <div><img src="https://user-images.githubusercontent.com/42160652/82973959-bb100c00-9fa6-11ea-94ac-e5b2f2d16d8b.jpeg" width="420" height="440"> </div>
-          <div><img src="https://user-images.githubusercontent.com/42160652/83376433-2b040500-a3a0-11ea-8747-5237b2220f05.jpeg"  width="725" height="440"></div>
+          <div><img id="left" src="https://user-images.githubusercontent.com/42160652/82973959-bb100c00-9fa6-11ea-94ac-e5b2f2d16d8b.jpeg" width="420" height="440"> </div>
+          <div><img id="right" src="https://user-images.githubusercontent.com/42160652/83376433-2b040500-a3a0-11ea-8747-5237b2220f05.jpeg"  width="725" height="440"></div>
         </div>
     
        <p class = "text">So how we can insert a node at the front of the circular linked list? 
-          <br>Assuming the front can be the end of the linked list, we can set the new node after the front. </p>
+          Assuming the front can be the end of the linked list, we can set the new node after the front. </p>
     
        <div class="flex-container">
-          <div><img src="https://user-images.githubusercontent.com/42160652/82974455-0971da80-9fa8-11ea-95cb-5ad5bd232bfb.jpeg" width="420" height="440"> </div>
-          <div><img src="https://user-images.githubusercontent.com/42160652/82983850-ebfc3b00-9fbe-11ea-8431-9210010f6bd4.jpeg"  width="420" height="440"></div>
+          <div><img id="left" src="https://user-images.githubusercontent.com/42160652/82974455-0971da80-9fa8-11ea-95cb-5ad5bd232bfb.jpeg" width="420" height="440"> </div>
+          <div><img  id="right" src="https://user-images.githubusercontent.com/42160652/82983850-ebfc3b00-9fbe-11ea-8431-9210010f6bd4.jpeg"  width="420" height="440"></div>
         </div>
     
        <p class = "text">Now lets look at the method that returns true if a value exists in a circular linked list or false if it does not.
-          <br> We can traverse it in a few ways. One way could be doing in a for loop while the other way can be doing it in a do-while loop. </p>
+           We can traverse it in a few ways. One way could be doing in a for loop while the other way can be doing it in a do-while loop. </p>
     
           <div class="flex-container">
-             <div><img src="https://user-images.githubusercontent.com/42160652/83378153-d1063e00-a3a5-11ea-8651-5f939c212791.jpeg" width="420" height="440"> </div>
-             <div><img src="https://user-images.githubusercontent.com/42160652/83378168-dfecf080-a3a5-11ea-8ca6-af8ca4191ffc.jpeg"  width="420" height="440"></div>
+             <div><img id="left" src="https://user-images.githubusercontent.com/42160652/83378153-d1063e00-a3a5-11ea-8651-5f939c212791.jpeg" width="420" height="440"> </div>
+             <div><img id="right" src="https://user-images.githubusercontent.com/42160652/83378168-dfecf080-a3a5-11ea-8ca6-af8ca4191ffc.jpeg"  width="420" height="440"></div>
            </div>
     
            <p class = "text"> Here is how we can code this method. </p>
     
-           <img class = "image" src="https://user-images.githubusercontent.com/42160652/82983892-fe767480-9fbe-11ea-8469-b374ecadd455.jpeg
+           <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82983892-fe767480-9fbe-11ea-8469-b374ecadd455.jpeg
        " width="700" height="640">
     
        <p class = "problem"> Lets look at two problems. For the problems we will deal with, we will use the class below. </p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82974122-35d92700-9fa7-11ea-8f2f-53240339e812.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82974122-35d92700-9fa7-11ea-8f2f-53240339e812.jpeg
        " width="600" height="640">
       
        <p class = "problem"> For this problem, we can delete the target value of a doubly linked list and move it to the front. </p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82984780-cec86c00-9fc0-11ea-9d55-9da39011249c.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82984780-cec86c00-9fc0-11ea-9d55-9da39011249c.jpeg
           " width="600" height="640">
     
        <p class = "solutions">Answer with explanation is at the bottom.</p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82984654-93c63880-9fc0-11ea-899e-6c55f6657b09.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82984654-93c63880-9fc0-11ea-899e-6c55f6657b09.jpeg
        " width="600" height="640">
      
        <p class = "problem">For this problem, we have to add a value in the circular linked list after target value is located.</p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82984903-0b946300-9fc1-11ea-9fcb-384adadfb518.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82984903-0b946300-9fc1-11ea-9fcb-384adadfb518.jpeg
        " width="600" height="640">
     
        <p class = "solutions">Answer with explanation is at the bottom.</p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/82984957-21098d00-9fc1-11ea-8a65-15a785b7c7cf.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/82984957-21098d00-9fc1-11ea-8a65-15a785b7c7cf.jpeg
         " width="600" height="640">
     
+         <!-- Doubly Linked Lists -->
         <h2 id="a3">Doubly Linked Lists</h2>
     
         <p class="darker">
@@ -289,47 +298,48 @@
        </p>
     
     
-        <img class = "image" src="https://user-images.githubusercontent.com/42160652/83103743-524b9100-a085-11ea-935e-1a25ecfae488.jpeg
+        <img class = "middle" src="https://user-images.githubusercontent.com/42160652/83103743-524b9100-a085-11ea-935e-1a25ecfae488.jpeg
         " width="600" height="640">
-    
+       
         <p class = "text">Unlike singly linked lists which we talked about at the beginning of this page, doubly linked lists does not just have a pointer that points <br> 
           to the next node but also the node points to the previous node. Here is how doubly linked lists are built in the fields. </p>
-     
-        <img class = "image" src="https://user-images.githubusercontent.com/42160652/83103855-8a52d400-a085-11ea-909a-e3869a82ede8.jpeg
+       
+        <img class = "middle" src="https://user-images.githubusercontent.com/42160652/83103855-8a52d400-a085-11ea-909a-e3869a82ede8.jpeg
         " width="600" height="640">
-     
+        
         <p class = "text">Here is how we can insert a node in the front of a doubly linked list.</p>
-     
-        <img class = "image" src="https://user-images.githubusercontent.com/42160652/83103973-cbe37f00-a085-11ea-82a8-dc2a40376842.jpeg
+        
+        <img class = "middle" src="https://user-images.githubusercontent.com/42160652/83103973-cbe37f00-a085-11ea-82a8-dc2a40376842.jpeg
         " width="800" height="640">
-     
+      
         <p class = "text" >Also we can make doubly circular linked lists. This method inserts to the front of a doubly circular linked lists.</p>
-     
-        <img class = "image" src="https://user-images.githubusercontent.com/42160652/83104060-f6cdd300-a085-11ea-9321-75157cd391a9.jpeg
+      
+        <img class = "middle" src="https://user-images.githubusercontent.com/42160652/83104060-f6cdd300-a085-11ea-9321-75157cd391a9.jpeg
          " width="600" height="640">
-    
+         
          <p class = "problem"> Lets look at two problems. Use the given class below. </p>
       
          <p class = "problem" >For this problem, we have to reverse a doubly linked list.</p>
       
-         <img class = "image" src="https://user-images.githubusercontent.com/42160652/83104253-5926d380-a086-11ea-8c65-8c3149ee1fca.jpeg
+         <img class = "middle" src="https://user-images.githubusercontent.com/42160652/83104253-5926d380-a086-11ea-8c65-8c3149ee1fca.jpeg
          " width="600" height="640">
       
-         <p class = "text">Answer with explanation is at the bottom.</p>
+         <p class = "solutions">Answer with explanation is at the bottom.</p>
       
-         <img class = "image"src="https://user-images.githubusercontent.com/42160652/83104254-5af09700-a086-11ea-8e33-d8965aa8eb11.jpeg
+         <img class = "middle"src="https://user-images.githubusercontent.com/42160652/83104254-5af09700-a086-11ea-8e33-d8965aa8eb11.jpeg
           " width="600" height="640">
 
-          <p class = "problem" >For this problem, we have to turn a binary search tree (hyperlink it) to a circular doubly linked list</p>
+          <p class = "problem">For this problem, we have to turn a binary search tree (hyperlink it) to a circular doubly linked list</p>
       
-          <img class = "image" src="https://user-images.githubusercontent.com/42160652/85938241-7b0bb400-b8d9-11ea-9239-ff28fa3a505e.jpeg
-          " width="600" height="640">
+          <img class = "middle" src="https://user-images.githubusercontent.com/42160652/88471863-ca92cf00-cedb-11ea-8616-32e8dd1aa256.jpeg
+          " width="1000" height="640">
        
-          <p class = "text">Answer with explanation is at the bottom.</p>
+          <p class = "solutions">Answer with explanation is at the bottom.</p>
        
-          <img class = "image"src="https://user-images.githubusercontent.com/42160652/85938242-7ba44a80-b8d9-11ea-949b-204b57cbb0dd.jpeg
+          <img class = "middle"src="https://user-images.githubusercontent.com/42160652/88472234-a4226300-cede-11ea-8f13-858ee67d7410.jpeg
            " width="600" height="640">
     
+              <!-- Space Complexity -->
        <h2 id="a4">Big O (Space and Time) of Linked Lists</h2>
     
        <p class="darker">
@@ -337,22 +347,27 @@
           <br>
        </p>
     
-    
        <p class = "text">Now lets explore the Big O of Linked Lists. Traversing usually takes O(n) time as we go through n nodes as shown in the image below. </p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/83102926-ad7c8400-a083-11ea-83ae-3fa0df168fab.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/83102926-ad7c8400-a083-11ea-83ae-3fa0df168fab.jpeg
        " width="600" height="640">
     
        <p class = "text">Here is a chart of the worst case Big O of linked lists. Also, I have compared the time complexity with arrays. <br>
           If you do not understand array, you can take a look here. </p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/83102933-aeadb100-a083-11ea-8cc6-3832989a5df4.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/83102933-aeadb100-a083-11ea-8cc6-3832989a5df4.jpeg
        " width="600" height="640">
     
        <p class = "text">Here is the space complexity of linked lists.</p>
     
-       <img class = "image" src="https://user-images.githubusercontent.com/42160652/83102936-afdede00-a083-11ea-9d3c-f9c3824a09cf.jpeg
+       <img class = "middle" src="https://user-images.githubusercontent.com/42160652/83102936-afdede00-a083-11ea-9d3c-f9c3824a09cf.jpeg
         " width="600" height="640">
+        <br>
+        <br>
+        <p class="darker">
+          <a href="#home" class = "darker">Back to top</a>
+          <br>
+       </p>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

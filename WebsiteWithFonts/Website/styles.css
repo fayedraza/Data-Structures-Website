@@ -1,4 +1,5 @@
 /*Created by Fayed Raza*/
+
 h1{
     text-align: center;
     font-size: 75px;
@@ -19,15 +20,6 @@ h1{
     font-size: 150%;
     font-family: "Times New Roman", Times, serif;
  }
- .text{
-    background-color: lightgrey;
-  text-align: center;
-  border: 3px solid rgb(223, 217, 217);
-  padding: 25px;
-  margin: 20px;
-font-family: "Times New Roman", Times, serif;
-font-size: 110%;
-}
 /*img {
   width: 100%;
   height: auto;
@@ -50,16 +42,26 @@ transition: width 5s, height 5s;
 
 }
 
-.container > li{
+.specialText {
   background-color: lightgrey;
   text-align: center;
-  margin-left:20px;
-  margin-right:20px;
-  margin-top: 0px;
+  border: 3px solid rgb(223, 217, 217);
+   margin-left: 20px;
+   margin-right: 20px;
   margin-bottom: 0px;
-font-family: "Times New Roman", Times, serif;
-font-size: 110%;
+  margin-top: 20px;
+  font-size: 115%;
+ 
 }
+
+.listContainer{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
 
 th{
   background-color: rgba(169, 169, 169, 0.26);
@@ -95,14 +97,22 @@ td, th {
 }
 
  .middle:hover{
-  width:  75%;
-  height: 75%;
+  width:  100%;
+  height: 100%;
+ 
+ }
+
+ #middle:hover {
+  width:  100%;
+  height: 100%;
+  transform:scale(1.0);
+   translate: (0%);
  }
 
  #right:hover {
   width:  100%;
   height: 100%;
-  transform:scale(1.0) translate(-25%);
+  transform:scale(1.0)  translate(-25%);
 }
 
  .problem{
@@ -121,7 +131,7 @@ td, th {
   border: 3px solid rgb(223, 217, 217);
   padding: 25px;
 margin: 20px;
-font-size: 115%;
+font-size: 120%;
 font-family: "Times New Roman", Times, serif;
    font-weight: 700;
  }
@@ -140,12 +150,16 @@ width: 50%;
     filter: brightness(50%);
   }
 
+  
+
  .text{
-    background-color: lightgrey;
+   margin: 20px;
+  background-color: lightgrey;
   text-align: center;
   border: 3px solid rgb(223, 217, 217);
   padding: 25px;
-margin: 20px;
+margin-left: 20px;
+margin-right: 20px;
 font-size: 115%;
    
  }

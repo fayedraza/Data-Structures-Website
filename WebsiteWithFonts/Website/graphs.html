@@ -1,3 +1,4 @@
+<!--Created by Fayed Raza-->
 <!doctype html>
 <html lang="en">
   
@@ -13,7 +14,7 @@
 
     <title> Graphs </title>
 
-  
+   <!--Tabs -->
   </head>
   <nav style="height: 100px;padding:0" id="header-nav" class="navbar navbar-default">
 
@@ -61,93 +62,105 @@
     </div>
     </nav>
 
+    <h1 id="home"> Graphs </h1>
+
+    <p class="text">If you already know about graphs and want to go into the specific sections then click one of the sections below. </p>
+    
+    <p class="darker">
+       <a href="#a1">1. Graphs</a>
+       <br>
+       <a href="#a2">2. Dijkastra's Shortest Algorithm </a>
+       <br>
+       <a href="#a3">3. Big O of Graphs</a>
+    </p>
+
     
 <body style="background-color: rgb(223, 217, 217);">
-    <h1 id="home">Graphs</h1>
 
-    <h2>What is a Graph? </h2>
+   <!-- Graph seciton -->
+    <h2 id="a1"> Graphs</h2>
 
-    <p class="text">Graphs are a data strucutres where there are many vertices connected with each other. Think about social meida 
-        websites like Facebook or Linkedln where there are a network between friends or family has been made.
+         <!-- Takes you to the top-->
+         <p class="darker">
+          <a href="#home" class = "darker">Back to top</a>
+          <br>
+        </p>
+
+    <h3>What is a Graph? </h3>
+
+    <p class="text">Graphs are a data structure where there are many vertices connected with each other. Think about social media 
+        websites like Facebook or Linkedln where there is a network between friends, family, or coworkers.
     </p>
     
     <p class = "text">  Here is an example of a graph. In terms of Facebook, you can think like A is friends with B 
         or an example in Linkedln is, E is 1 connection away from B.
     </p>
       
-    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85974597-e7eb8080-b9a3-11ea-9eda-688223928235.jpeg
+    <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85974597-e7eb8080-b9a3-11ea-9eda-688223928235.jpeg
       " width="600" height="640">
 
-      <p class = "text"> So there here are some types of grpahs. One is a directed graph: a graph with arrows and has strict connection such as,
-          A can go to B, but B can't got to A. Think about how in Instagram, you follow Hugh Jackman but he does not follow you back. Another type is an undirected graph: a graph where two vertices know each other back an forth. 
+      <p class = "text"> So here are some types of graphs. One is a directed graph: a graph with arrows and has strict connection such as,
+          A can go to B, but B can't got to A. Think about how in Instagram, you follow Hugh Jackman but he does not follow you back. Another type is an undirected graph: a graph where two vertices know each other back and forth. 
           For instance, you follow your friend and your friend follows you back.
     </p>
       
-    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85974837-84ae1e00-b9a4-11ea-9d04-c43afc98d5ff.jpeg
+    <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85974837-84ae1e00-b9a4-11ea-9d04-c43afc98d5ff.jpeg
       " width="600" height="640">
 
-    <p class = "text"> So there here are some types of grpahs. One is a directed graph: a graph with arrows and has strict connection such as,
-        A can go to B, but B can't got to A. Think about how in Instagram, you follow Hugh Jackman but he does not follow you back. Another type is an undirected graph: a graph where two vertices know each other back an forth. 
-        For instance, you follow your friend and your friend follows you back.
-  </p>
-    
-  <img class = "image" src="https://user-images.githubusercontent.com/42160652/85974837-84ae1e00-b9a4-11ea-9d04-c43afc98d5ff.jpeg
-    " width="600" height="640">
-
-    <p class = "text"> We are go over simple graphs: graphs with no self loop or has no multiple edges. Here is an example of graphs
+    <p class = "text"> We will go over simple graphs: graphs with no self loop or has no multiple edges. Here are some examples of graphs
         that are not simple. While they are useful in certain situations, they are not necessary to know.
     </p>
       
-    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85976942-9d6d0280-b9a9-11ea-85c4-e247b6a60eaa.jpeg
+    <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85976942-9d6d0280-b9a9-11ea-85c4-e247b6a60eaa.jpeg
       " width="600" height="640">
 
       <p class = "text"> Cyclic graphs are graphs with a cycle and acyclic graphs are graphs without a cycle.
     </p>
       
-    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85981698-a6ae9d00-b9b2-11ea-8648-e7dfa6f11a20.jpeg
+    <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85981698-a6ae9d00-b9b2-11ea-8648-e7dfa6f11a20.jpeg
       " width="600" height="640">
 
-    <p class = "text"> Graphs can also have weights. This is called a weighted graph. 
+    <p class = "text"> Graphs can also have weights. This is called a weighted graph. Each edge has a weight.
   </p>
     
-  <img class = "image" src="https://user-images.githubusercontent.com/42160652/85975157-4fee9680-b9a5-11ea-8c46-3a0939107320.jpeg
+  <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85975157-4fee9680-b9a5-11ea-8c46-3a0939107320.jpeg
     " width="600" height="640">
 
-    <p class = "text"> Here are two ways we can represent a graph: an adjency matrix (like a 2D array) and an adjency linked list (similar to a hash table).
+    <p class = "text"> Here are two ways we can represent a graph: an adjacency matrix (like a 2D array) and an adjacency linked list (similar to a hash table).
     </p>
       
-    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85975370-ddca8180-b9a5-11ea-8335-925e2774a082.jpeg
+    <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85975370-ddca8180-b9a5-11ea-8335-925e2774a082.jpeg
       " width="600" height="640">
 
-    <p class = "text"> As you can see we reprsented agn undirected graph in an adjency matrix. Basically, A to B (0 to 1) and B to A (1 to 0) will be filled in 
-        the adjency matrix with T since A and B knows each other. On the image on the right, since A knows B but not the other way, only (0,1) will be filled with
+    <p class = "text"> As you can see we represented an undirected graph in an adjacency matrix. Basically, A to B (0 to 1) and B to A (1 to 0) will be filled in 
+        the adjacency matrix with T since A and B knows each other. On the image on the right, since A knows B but not the other way, only (0,1) will be filled with
         T. Also, when plotting, we will first start with 0 on the x-axis then 1 on the y-axis.
     </p>
       
     <div class="flex-container">
-        <div><img src="https://user-images.githubusercontent.com/42160652/85975562-6c3f0300-b9a6-11ea-9016-d5ad7fbce01a.jpeg" width="420" height="440"></div>
-        <div><img src= "https://user-images.githubusercontent.com/42160652/85975567-706b2080-b9a6-11ea-9e5f-ac8e6ed8471a.jpeg" width="420" height="440"> </div>
+        <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85975562-6c3f0300-b9a6-11ea-9016-d5ad7fbce01a.jpeg" width="420" height="440"></div>
+        <div><img id="right" src= "https://user-images.githubusercontent.com/42160652/85975567-706b2080-b9a6-11ea-9e5f-ac8e6ed8471a.jpeg" width="420" height="440"> </div>
       </div>
 
       <p class = "text"> With weighted graphs, we will replace T with the weight to represent the relationship.
     </p>
       
-    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85976279-313dcf00-b9a8-11ea-9048-abcbcb31dbb2.jpeg
+    <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85976279-313dcf00-b9a8-11ea-9048-abcbcb31dbb2.jpeg
       " width="600" height="640">
 
-      <p class = "text"> The adjency linked list has each vertex holding all of their neighbors. - represents the neighor relationship
-          in directed and -> remember the relationship in undirected graph. 
+      <p class = "text"> The adjacency linked list has each vertex holding all of their neighbors. - represents a neighbor relationship
+          in a directed graph and -> remember a relationship in an undirected graph. 
     </p>
       
     <div class="flex-container">
-        <div><img src="https://user-images.githubusercontent.com/42160652/85976355-66e2b800-b9a8-11ea-9a08-1882c327deb2.jpeg" width="420" height="440"></div>
-        <div><img src= "https://user-images.githubusercontent.com/42160652/85976350-63e7c780-b9a8-11ea-9e90-c60ff2a73714.jpeg" width="420" height="440"> </div>
+        <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85976355-66e2b800-b9a8-11ea-9a08-1882c327deb2.jpeg" width="420" height="440"></div>
+        <div><img id ="right" src= "https://user-images.githubusercontent.com/42160652/85976350-63e7c780-b9a8-11ea-9e90-c60ff2a73714.jpeg" width="420" height="440"> </div>
       </div>
 
-      <p class = "text"> Graphs can be seperated apart. They could have no connections at all. These are called islands.
+      <p class = "text"> Graphs can be separated apart. They could have no connections at all. These are called islands.
     </p>
       
-    <img class = "image" src="https://user-images.githubusercontent.com/42160652/85977487-b1653400-b9aa-11ea-9280-5dc06d6e2c79.jpeg
+    <img class = "middle" src="https://user-images.githubusercontent.com/42160652/85977487-b1653400-b9aa-11ea-9280-5dc06d6e2c79.jpeg
       " width="600" height="640">
 
       <h3>Coding Graphs in Java</h3>
@@ -158,264 +171,294 @@
         it will hold the vertex name and its neighbors. 
    </p>
      
-   <img class = "image" src="https://user-images.githubusercontent.com/42160652/86029268-eef4ac00-ba00-11ea-9acb-2fbbd36a3410.jpeg
+   <img class = "middle" src="https://user-images.githubusercontent.com/42160652/86029268-eef4ac00-ba00-11ea-9acb-2fbbd36a3410.jpeg
      " width="600" height="640">
 
-   <h2>Traversing a Graph: Depth First Search (DFS) </h2>
+   <h3>Traversing a Graph: Depth First Search (DFS) </h3>
 
 
    <p class = "text">So how can we traverse through a graph, there are two popular types of traversals. We will first go through depth 
        first search. We start at the new node and see if there is children then we call depth first search on them. Once done we go onto
-       the next child and so on till we go through all of the nodes. We will start with an array initialized with all values as false.
+       the next child and so on till we go through all of the vertices. We will start with an array initialized with all values as false.
        Each index the vertex matches with the boolean value in the array.
 </p>
   
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85978801-787a8e80-b9ad-11ea-88d1-0b495dea5cee.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85978801-787a8e80-b9ad-11ea-88d1-0b495dea5cee.jpeg
   " width="600" height="640">
 
   <p class = "text">First, we will visit A and turn it to True to represent we have visited it.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85978604-0c982600-b9ad-11ea-96ca-5bbae75995e4.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85978604-0c982600-b9ad-11ea-96ca-5bbae75995e4.jpeg
 " width="600" height="640">
 
-<p class = "text">Then we visit B and turn it to True. Also we will now call depth first search on its children. We first call it
-    on C since C alphabetically come first.
+<p class = "text">Then we visit A's child, B, and turn it to True. Also we will now call depth first search on its children. We first call it
+    on C since C alphabetically comes first.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85979021-c7282880-b9ad-11ea-9d8c-229ab8ad0b43.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85979021-c7282880-b9ad-11ea-9d8c-229ab8ad0b43.jpeg
 " width="600" height="640">
 
-<p class = "text"> C gets its boolean value turned to true. but it has no children on its own so we are done from here. Now off to
+<p class = "text"> C gets its boolean value turned to true. but it has no children on its own so we are done from here. Now off to D.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85979234-140bff00-b9ae-11ea-9f4b-01b5c40e5902.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85979234-140bff00-b9ae-11ea-9f4b-01b5c40e5902.jpeg
 " width="600" height="640">
 
 <p class = "text"> Then D gets it boolean value turned to true. Now lets call DFS on D's children.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85979021-c7282880-b9ad-11ea-9d8c-229ab8ad0b43.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/88588355-6714b880-d025-11ea-85aa-f80b2d9f2efd.jpeg
 " width="600" height="640">
 
 <p class = "text"> For all of D's children we just needed to mark it true and no need to call more DFS since there are no other
     children.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85980055-a5c83c00-b9af-11ea-83f9-0c830ca5492a.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85980055-a5c83c00-b9af-11ea-83f9-0c830ca5492a.jpeg
 " width="600" height="640">
 
-<p class = "text"> In the case, there was an Island we would have to restart. For instance, we would have to restart at H after being 
+<p class = "text"> In the case, there was an island we would have to restart. For instance, we would have to restart at H after being 
     done executing the first island. Now try to implement DFS in Java.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85980265-0eafb400-b9b0-11ea-809e-3e4393d54b1a.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85980265-0eafb400-b9b0-11ea-809e-3e4393d54b1a.jpeg
 " width="600" height="640">
 
 <p class = "text"> Java implementation of DFS
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/86029160-d08eb080-ba00-11ea-84f3-052c39ddb674.jpeg
-" width="600" height="640">
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/86029160-d08eb080-ba00-11ea-84f3-052c39ddb674.jpeg
+" width="1000" height="640">
 
-<h2>Traversing a Graph: Breadth First Search (BFS) </h2>
+<h3>Traversing a Graph: Breadth First Search (BFS) </h3>
 
 <p class = "text">Another type of traversal is, Breadth First Search. Using a queue, we add the first vertex and then add the 
-    children of that vertex to the queue. Then we will pop out a vertex of the queue and do bfs with that. We keep on doing it till
+    children of that vertex to the queue. Then we will pop out a vertex of the queue and call BFS with that. We keep on doing it till
     the queue is empty.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85980690-de1c4a00-b9b0-11ea-9f67-172b59f6dc72.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85980690-de1c4a00-b9b0-11ea-9f67-172b59f6dc72.jpeg
 " width="600" height="640">
 
-<p class = "text">Then we pop B out and mark its boolean value to true. Also, we add B's children: C and D.
+<p class = "text"> We first add A.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85980969-5c78ec00-b9b1-11ea-9d2e-903dc95635e4.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/88604196-f087b300-d044-11ea-9c2f-5e3d6d58f048.jpeg
 " width="600" height="640">
 
-<p class = "text">Then we pop out C and since C does not have and children, we just mark it true and pop out the next one. We add and E,F, and 
-    G and call BFS on each of them. The queue becomes empty and we can stop Breadth First Search. Now try to implement BFS.
+<p class = "text"> Now we add A's child B and mark A's value true.
 </p>
 
-<p class = "text"> Java implementation of BFS
-</p>
-
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/86029085-b654d280-ba00-11ea-8110-1f52bfab18d5.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/88590030-105cae00-d028-11ea-9a30-7376a3b0cfd2.jpeg
 " width="600" height="640">
 
-<h2> Applications of Graphs: Topological Sort (DFS) </h2>
+<p class = "text">Then we pop out B and mark its boolean value to true. Also, we add B's children: C and D.
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85980969-5c78ec00-b9b1-11ea-9d2e-903dc95635e4.jpeg
+" width="600" height="640">
+
+<p class = "text">Then we pop out C and since C does not have and children, we just mark it true and pop out the next vertex. 
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/88590332-84975180-d028-11ea-8170-876d91dc3a4e.jpeg
+" width="1000" height="640">
+
+<p class = "text">Then we pop out D and add its children: E, F, and G. We mark D's value true.
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/88590617-0c7d5b80-d029-11ea-99d4-f7b491374908.jpeg
+" width="1000" height="640">
+
+<p class = "text"> We pop out E, F, and G and mark each of its value true. Since they all do not have children so the queue is empty and we are done. Now try to implement it in Java.
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/88590619-0d15f200-d029-11ea-9c99-c2b25c8ce297.jpeg
+" width="1000" height="640">
+
+<p class = "text"> Java implementation of BFS.
+</p>
+
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/86029085-b654d280-ba00-11ea-8110-1f52bfab18d5.jpeg
+" width="600" height="640">
+
+<h3> Applications of Graphs: Topological Sort (DFS) </h3>
 
 <p class = "text">Suppose we wanted to complete a bunch of tasks in order of precedence. We can do that in a process called Topological Sort 
-    where we assign numbers in order of precedence (topological numbers).
+    where we assign numbers in order of precedence (topological numbers). For instance, we could start at A and number at zero and then label B, 1 and C, 2, and so on. The arrows show the order. We can start
+    at any vertex and assign the numbers and all of the vertices should be assigned with the same number.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85980969-5c78ec00-b9b1-11ea-9d2e-903dc95635e4.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/88592124-7ac31d80-d02b-11ea-8bb1-a93f1765217e.jpeg
 " width="600" height="640">
 
-<p class = "text"> We could start at A and number at zero and label B, 1 and C, 2. But here is the problem? What if we start at C? We can't 
-    number it zero because that does not have higher precedence.
+<p class = "text"> We could start at A and number at zero and label B, 1 and C, 2. But here is the problem? Since in topological sort we can start at any vertex and still
+  assign the same number but what if we start at C? We can't 
+    number it zero because that does not have higher precedence. Plus, we will reach to a dead-end.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85982461-dc07ba80-b9b3-11ea-818f-72194e84d496.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85982461-dc07ba80-b9b3-11ea-818f-72194e84d496.jpeg
 " width="600" height="640">
 
-<p class = "text"> We could start at 4 on C and then backtrack and declare 3.
+<p class = "text"> Now lets go back to the problem in the beginning. Lets try to do topological sort starting at vertex C. We could start at 4 on C and then backtrack and declare 3.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85983122-f3937300-b9b4-11ea-9034-2ce01b969835.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85983122-f3937300-b9b4-11ea-9034-2ce01b969835.jpeg
 " width="600" height="640">
 
 <p class = "text"> Then declare 2 on E. Backtrack to 1 and then 0.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85983214-1aea4000-b9b5-11ea-81c4-bade582879ea.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85983214-1aea4000-b9b5-11ea-81c4-bade582879ea.jpeg
 " width="600" height="640">
 
 <p class = "text"> This is how we would topological sort, if we start at A. It seem pretty easy if you get the previous example. Now try 
-  to implement DFS Topsort on your own.
+  to implement DFS Topsort in Java on your own.
 </p>
 
 <div class="flex-container">
-  <div><img src="https://user-images.githubusercontent.com/42160652/85983323-55ec7380-b9b5-11ea-964e-0482d1808c43.jpeg" width="420" height="440"></div>
-  <div><img src= "https://user-images.githubusercontent.com/42160652/85983328-584ecd80-b9b5-11ea-8b46-42b90d8eb97f.jpeg" width="420" height="440"> </div>
+  <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85983323-55ec7380-b9b5-11ea-964e-0482d1808c43.jpeg" width="420" height="440"></div>
+  <div><img id="right" src= "https://user-images.githubusercontent.com/42160652/85983328-584ecd80-b9b5-11ea-8b46-42b90d8eb97f.jpeg" width="420" height="440"> </div>
 </div>
 <div class="flex-container">
-    <div><img src="https://user-images.githubusercontent.com/42160652/85983334-597ffa80-b9b5-11ea-8124-09382dcd4507.jpeg" width="420" height="440"></div>
-    <div><img src= "https://user-images.githubusercontent.com/42160652/85983351-600e7200-b9b5-11ea-9e29-2313833a8f9d.jpeg" width="420" height="440"> </div>
+    <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85983334-597ffa80-b9b5-11ea-8124-09382dcd4507.jpeg" width="420" height="440"></div>
+    <div><img id="right" src= "https://user-images.githubusercontent.com/42160652/85983351-600e7200-b9b5-11ea-9e29-2313833a8f9d.jpeg" width="420" height="440"> </div>
   </div>
 
   <p class = "text">  Java implementation of DFS Topsort.
   </p>
   
-  <img class = "image" src="https://user-images.githubusercontent.com/42160652/86028896-7b529f00-ba00-11ea-96c7-99dfeb4f2671.jpeg
+  <img class = "middle" src="https://user-images.githubusercontent.com/42160652/86028896-7b529f00-ba00-11ea-96c7-99dfeb4f2671.jpeg
   " width="600" height="640">
 
-  <h2> Applications of Graphs: Topological Sort (BFS) </h2>
+  <h3> Applications of Graphs: Topological Sort (BFS) </h3>
 
   <p class = "text">  We will first add all of the vertices that already has an index of zero (because of this we don't even need a
     driver for bfs).
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85983916-56d1d500-b9b6-11ea-8f7d-e9561a86b947.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85983916-56d1d500-b9b6-11ea-8f7d-e9561a86b947.jpeg
 " width="600" height="640">
 
 <p class = "text">  We will first calculate all of the indegrees. Indegrees of a vertex are determined by how many vertices point to 
-    that vertex. We also will add them to the final sequence. 
+    that vertex. We also will add them to the final sequence. Once a vertex's indegree is zero we will add them to the queue and the final
+    sequence array. Since A and F indegrees are zero we will add them.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85983984-6f41ef80-b9b6-11ea-85fb-487fc5821483.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85983984-6f41ef80-b9b6-11ea-85fb-487fc5821483.jpeg
 " width="600" height="640">
 
-<p class = "text">  Now we popped one out and for the neighbors of that we will decrease its value. For instance, A's neighbors, B
-    and D, will be decreased by 1. Since both of them are now zero, we will add it to the queue and the final sequence array.
+<p class = "text">  Now we popped A out and for the neighbors of that vertex we will decrease its indegree by 1. For instance, A's neighbors, B
+    and D, will be decreased by 1. Since both of them are now zero, we will add it to the queue and the final sequence array. When we popped F, its neighbor (E) indegree 
+    has become 1 but it is not 0 so we can not add it.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85983984-6f41ef80-b9b6-11ea-85fb-487fc5821483.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85984660-79b0b900-b9b7-11ea-9633-3f46da289096.jpeg
 " width="600" height="640">
 
-<p class = "text">  Now we popped one out and for the neighbors of that we will decrease its value. For instance, A's neighbors, B
-    and D, will be decreased by 1. Since both of them are now zero, we will add it to the queue and the final sequence array. F's neighbor
-    E will be decreased by 1 but it is still not zero so we can not add it to the queue and the final sequence. 
-</p>
-
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85984660-79b0b900-b9b7-11ea-9633-3f46da289096.jpeg
-" width="600" height="640">
-
-<p class = "text"> C and E have become zero so we can add them to the queue and final array. Both C and E have no children so 
-    we are done. Now try to implement bfs topsort on your own.
+<p class = "text"> C and E indegrees have become zero so we can add them to the queue and final array. Both C and E have no neighbors so 
+    we are done. Now try to implement BFS topsort in Java on your own.
 </p>
 
 <div class="flex-container">
-  <div><img src="https://user-images.githubusercontent.com/42160652/85984739-9947e180-b9b7-11ea-8e10-f8c616884023.jpeg" width="420" height="440"></div>
-  <div><img src= "https://user-images.githubusercontent.com/42160652/85984752-9cdb6880-b9b7-11ea-8260-81f55d914be7.jpeg" width="420" height="440"> </div>
+  <div><img id="left" src="https://user-images.githubusercontent.com/42160652/85984739-9947e180-b9b7-11ea-8e10-f8c616884023.jpeg" width="420" height="440"></div>
+  <div><img id="right" src= "https://user-images.githubusercontent.com/42160652/85984752-9cdb6880-b9b7-11ea-8260-81f55d914be7.jpeg" width="420" height="440"> </div>
 </div>
 
 <p class = "text">  Java implementation of BFS Topsort.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/86028738-45151f80-ba00-11ea-9763-9af306768fef.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/86028738-45151f80-ba00-11ea-9763-9af306768fef.jpeg
 " width="600" height="640">
 
-<h2> Dijkastra's Shortest Algorithm </h2>
+ <!-- ijkastra's Shortest Algorithm  Seciton-->
+<h2 id="a2"> Dijkastra's Shortest Algorithm </h2>
 
-<p>Dijkastra's shortest algorithm can be used to find the shortest path. It is responsible for many applications such as, Google Maps.
+     <!-- Takes you to the top-->
+     <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+    </p>
+
+
+<p class="text">Dijkastra's shortest algorithm can be used to find the shortest path. It is responsible for many applications such as, Google Maps.
     It was founded by computer scientist Edsger W. Dijkstra in 1956.
 </p>
 
 <p class = "text">  Suppose we wanted to find the shortest path from A to C. Then we will first add A on done. 
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85986064-a4037600-b9b9-11ea-9333-755c6841f819.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85986064-a4037600-b9b9-11ea-9333-755c6841f819.jpeg
 " width="600" height="640">
 
-<p class = "text">  Then we list all of the lengths from A to ... . If it does not exist with put infinity. We circled the shortest
-    length which will be 5 meaning we are done with B and that is the shortest path.
+<p class = "text">  Then we list all of the lengths from A to its neighbor vertices. If it does not exist (the vertex is not a neigbor) put infinity or its last value. In this case, it is
+  infinity as there has been no previous value as of now. We circled the shortest
+    length which will be 5 meaning we are done with B and that is the shortest path from A to B.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85986068-a534a300-b9b9-11ea-8d43-86685c7f0361.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85986068-a534a300-b9b9-11ea-8d43-86685c7f0361.jpeg
 " width="600" height="640">
 
-<p class = "text">  Then we list all of the lengths from B to ... excluding B since we already are done (put a squigly line to show that
+<p class = "text">  Then we list all of the lengths from B to its neighbors excluding B since it is in done (I put a squigly line to show that
     we are done). Then we add 105 as we combined the length of path from B to C (100) plus the previous shortest path (5) and it will sum
     up to 105. D is still 10 as a direct path between B to D does not exist. D (10) is our shortest path. 
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85986068-a534a300-b9b9-11ea-8d43-86685c7f0361.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85986068-a534a300-b9b9-11ea-8d43-86685c7f0361.jpeg
 " width="600" height="640">
 
 <p class = "text">  Now we are at D. Since the path from D to C is 6 and the last shortest was 10 so, 6+10=16. 16 is less than 105,
-    so 105 will be replcaed with 16. The shortest path is 16.
+    so 105 will be replaced with 16. The shortest path is 16.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85986068-a534a300-b9b9-11ea-8d43-86685c7f0361.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85987071-280a2d80-b9bb-11ea-9543-1bf70a728752.jpeg
 " width="600" height="640">
 
-<p class = "text">  Now we are at D. Since the path from D to C is 6 and the last shortest was 10 so, 6+10=16. 16 is less than 105,
-    so 105 will be replcaed with 16. The shortest path is 16.
+<p class = "problem"> Now find the shortest path from A to F.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85987071-280a2d80-b9bb-11ea-9543-1bf70a728752.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85987162-47a15600-b9bb-11ea-90db-289e22ae9b3e.jpeg
 " width="600" height="640">
 
-<p class = "text"> Now find the shortest path from A to F.
+<p class = "solutions">  Answer with explanation is below.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85987162-47a15600-b9bb-11ea-90db-289e22ae9b3e.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85987165-48d28300-b9bb-11ea-904f-e783a4fa709d.jpeg
 " width="600" height="640">
 
-<p class = "text">  Answer with explanation is below.
+<p class = "problem"> Implement Shortest Path between two vertices in Java using the class on the left.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85987165-48d28300-b9bb-11ea-904f-e783a4fa709d.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85987280-715a7d00-b9bb-11ea-9862-cd024752a68a.jpeg
 " width="600" height="640">
 
-<p class = "text"> Implemenet Shortest Path between two verticies in Java 
+<p class = "solutions">  Answer with explanation is below.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85987280-715a7d00-b9bb-11ea-9862-cd024752a68a.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85987284-728baa00-b9bb-11ea-8a89-dd2b338b07e7.jpeg
 " width="600" height="640">
 
-<p class = "text">  Answer with explanation is below.
+<!-- Big o Section-->
+<h2 id="a3">Big O of Graphs</h2>
+
+     <!-- Takes you to the top-->
+     <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+    </p>
+
+<p class = "text">  This is the space complexity of adjacency matrix and adjacency linked list. 
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85987284-728baa00-b9bb-11ea-8a89-dd2b338b07e7.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85987549-be3e5380-b9bb-11ea-97c1-5bb04248a5fa.jpeg
 " width="600" height="640">
 
-<h2>Big O of Graphs</h2>
-
-
-<p class = "text">  This is the space complexity of adjacency matrix and adjacency linked list.  (edit)
-</p>
-
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85987549-be3e5380-b9bb-11ea-97c1-5bb04248a5fa.jpeg
-" width="600" height="640">
-
-<p class = "text"> Runtime of BFS and DFS traversals and Topsort. BFS and DFS have the same runtime which is why overall not one 
+<p class = "text"> Runtime of BFS and DFS traversals and Topsort BFS and DFS have the same runtime which is why overall not one 
   is better than the other, but in certain problems one can be better than the other.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85987543-bbdbf980-b9bb-11ea-8497-268021c409f7.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85987543-bbdbf980-b9bb-11ea-8497-268021c409f7.jpeg
 " width="600" height="640">
 
 <p class = "text"> Runtime of Dijkastra's Method. It is determined by four functions: add to fringe, pick minimum, check old distance vs new distance, and
@@ -423,8 +466,16 @@
     the four functions.
 </p>
 
-<img class = "image" src="https://user-images.githubusercontent.com/42160652/85987547-bd0d2680-b9bb-11ea-9831-b866dd85c324.jpeg
+<img class = "middle" src="https://user-images.githubusercontent.com/42160652/85987547-bd0d2680-b9bb-11ea-9831-b866dd85c324.jpeg
 " width="600" height="640">
+
+<br>
+<br>
+     <!-- Takes you to the top-->
+     <p class="darker">
+      <a href="#home" class = "darker">Back to top</a>
+      <br>
+    </p>
 <!-- Optional JavaScript -->
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
